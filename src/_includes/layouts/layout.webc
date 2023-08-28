@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" :content="eleventy.generator">
+    <title @html="this.title ? `@hasanhaja | ${this.title}` : '@hasanhaja'"></title>
+    <meta
+      name="description"
+      content="Fullstack portfolio web app built in 11ty"
+    >
+    <link href="https://fosstodon.org/@hasanhaja" rel="me">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+
+    <style @raw="getBundle('css')" webc:keep></style>
+		<script @raw="getBundle('js')" webc:keep></script>
+  </head>
+  <body>
+    <main @html="this.content"></main>
+    <footer>
+      <p>
+        Copyright &#169; 2023 Hasan Ali
+      </p>
+    </footer>
+  </body>
+</html>
