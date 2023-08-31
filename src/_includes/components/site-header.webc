@@ -1,4 +1,4 @@
-<div class="header-container">
+<header class="header-container">
   <div class="logo">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd" />
@@ -11,7 +11,7 @@
     </p>
   </div>
   <navbar></navbar>
-</div>
+</header>
 
 <style webc:scoped>
   .header-container {
@@ -29,11 +29,33 @@
   .logo > svg {
     width: 2.5rem;
     height: 2.5rem;
+    fill: var(--fill-accent);
   }
 
   .logo > p {
     font-weight: 700;
     font-size: 1.875rem;
-    line-height: 2.25rem; /* not sure I need this */
+    color: var(--text-accent);
+  }
+
+  /* Reset default anchor styles */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Reset anchor styles for visited links */
+  a:visited {
+    color: inherit;
+  }
+
+  /* Reset anchor styles for links on hover */
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Reset anchor styles for active links */
+  a:active {
+    color: inherit;
   }
 </style>

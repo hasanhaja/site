@@ -6,42 +6,110 @@
     <meta name="generator" content="Eleventy v2.0.1">
     <title>@hasanhaja</title>
     <meta name="description" content="Fullstack portfolio web app built in 11ty">
+    <meta name="color-scheme" content="dark light">
+    
     <link href="https://fosstodon.org/@hasanhaja" rel="me">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <style>.weji57kkf img{border-radius:50%}
+    <style>.wfesxpowo section{background-color:var(--bg-primary)}.wfesxpowo header{padding-inline:1rem;padding-block:4rem;text-align:center}.wfesxpowo img{border-radius:50%;max-width:16rem;max-height:16rem;margin-inline:auto}.wfesxpowo h2{font-size:2.25rem;font-weight:800;padding-block-start:1rem}@media (min-width:768px){.wfesxpowo header{padding:5rem;display:flex;gap:4rem;justify-content:center}.wfesxpowo img{max-width:18rem;max-height:18rem;margin-inline:unset}.wfesxpowo h2{font-size:4.5rem;padding:2rem;margin-block:auto}}
 .wu4ybzcxl a:hover{color:var(--link-hover-accent)}.wu4ybzcxl a[data-accent-theme="cruk"]{--link-hover-accent: #e40085}.wu4ybzcxl a[data-accent-theme="nextjs"]{--link-hover-accent: #0070f3}.wu4ybzcxl a[data-accent-theme="solidjs"]{--link-hover-accent: #446b9e}.wu4ybzcxl a[data-accent-theme="astro"]{--link-hover-accent: #c026d3}
 .wjliadsnj li{list-style:none}.wjliadsnj .external-link{display:inline-block}.wjliadsnj svg{width:1.25rem;height:1.25rem}@media (min-width:768px){.wjliadsnj ul{display:flex;align-items:center;gap:0.5rem}}
-.wsxrszrnj .header-container{display:flex;justify-content:space-between;padding:1rem}.wsxrszrnj .logo{display:flex;gap:0.5rem;align-items:center}.wsxrszrnj .logo>svg{width:2.5rem;height:2.5rem}.wsxrszrnj .logo>p{font-weight:700;font-size:1.875rem;line-height:2.25rem}
+.w28-df8ga .header-container{display:flex;justify-content:space-between;padding:1rem}.w28-df8ga .logo{display:flex;gap:0.5rem;align-items:center}.w28-df8ga .logo>svg{width:2.5rem;height:2.5rem;fill:var(--fill-accent)}.w28-df8ga .logo>p{font-weight:700;font-size:1.875rem;color:var(--text-accent)}.w28-df8ga a{color:inherit;text-decoration:none}.w28-df8ga a:visited{color:inherit}.w28-df8ga a:hover{text-decoration:underline}.w28-df8ga a:active{color:inherit}
+.wq_kuimf7 section{background-color:var(--bg-primary)}.wq_kuimf7 img{border-radius:50%;max-width:16rem;aspect-ratio:1}.wq_kuimf7 h2{font-size:2.25rem;font-weight:800}@media (min-width:768px){.wq_kuimf7 header{display:flex;gap:4rem;justify-content:center;text-align:center}.wq_kuimf7 img{max-width:18rem}.wq_kuimf7 h2{font-size:4.5rem}}
 *, *::before, *::after {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-    font: inherit;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
 
-  html {
-    color-scheme: dark light;
-  }
+:root {
+  /* Colors */
+  --color-base: 34, 40, 49;
+  --color-inverted: 232, 232, 232;
+  --color-primary: 253, 186, 116;
+  --color-secondary: 48, 71, 94;
+  --color-secondary-shadow: 74, 93, 117;
+  --color-secondary-inverted: 114, 138, 168;
+  --color-section: 245, 230, 202;
+  --color-section-inverted: 191, 179, 154;
+  --color-section-shadow: 165, 152, 124;
+  --color-accent: 245, 71, 72;
 
-  body {
-    min-height: 100vh;
-  }
+  --opacity: 1;
   
-  img, svg, video, picture {
-    display: block;
-    max-width: 100%;
-  }</style>
+  /* Tokens */
+  --text-base: rgba(var(--color-base), var(--opacity));
+  --text-primary: rgba(var(--color-primary), var(--opacity));
+  --text-secondary: rgba(var(--color-secondary), var(--opacity));
+  --text-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
+  --text-inverted: rgba(var(--color-inverted), var(--opacity));
+  --text-accent: rgba(var(--color-accent), var(--opacity));
+        
+  --bg-primary: rgba(var(--color-primary), var(--opacity));
+  --bg-secondary: rgba(var(--color-secondary), var(--opacity));
+  --bg-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
+  --bg-inverted: rgba(var(--color-inverted), var(--opacity));
+  --bg-section: rgba(var(--color-section), var(--opacity));
+  --bg-section-inverted: rgba(var(--color-section-inverted), var(--opacity));
+  --bg-accent: rgba(var(--color-accent), var(--opacity));
+
+  --section-shadow: rgba(var(--color-section-shadow), var(--opacity));
+
+  --fill-base: rgba(var(--color-base), var(--opacity));
+  --fill-primary: rgba(var(--color-primary), var(--opacity));
+  --fill-secondary: rgba(var(--color-secondary), var(--opacity));
+  --fill-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
+  --fill-inverted: rgba(var(--color-inverted), var(--opacity));
+  --fill-section: rgba(var(--color-section), var(--opacity));
+  --fill-accent: rgba(var(--color-accent), var(--opacity));
+  
+  --stroke-base: rgba(var(--color-base), var(--opacity));
+  --stroke-inverted: rgba(var(--color-inverted), var(--opacity));
+  --stroke-accent: rgba(var(--color-accent), var(--opacity));
+      
+  --decoration-secondary: rgba(var(--color-secondary), var(--opacity));
+  --decoration-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
+  --decoration-accent: rgba(var(--color-accent), var(--opacity));
+
+  --divide-base: rgba(var(--color-base), var(--opacity));
+
+  /* Breakpoint for reference only because they don't work in media queries */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Global styles */
+  color: var(--text-base);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-section);
+
+  font-family: "Helvetica Neue", Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img, svg, video, picture {
+  display: block;
+  max-width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+
+}</style>
 		<script></script>
   </head>
   <body>
-    <header class="wsxrszrnj"><div class="header-container">
+    <site-header class="w28-df8ga"><header class="header-container">
   <div class="logo">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path>
@@ -79,18 +147,18 @@
 
 
 </navbar>
-</div>
-
-
 </header>
-    <main><hero class="weji57kkf"><div class="bg-skin-primary">
-  <div class="md:flex md:gap-16 px-4 py-16 md:p-20 justify-center text-center">
+
+
+</site-header>
+    <main><hero class="wfesxpowo wq_kuimf7"><section>
+  <header class="md:flex md:gap-16 px-4 py-16 md:p-20 justify-center text-center">
     <img src="/assets/android-chrome-512x512.png" class="mx-auto md:mx-0 max-w-64 max-h-64 md:max-w-72 md:max-h-72 rounded-full">
-    <h1 class="pt-4 md:p-8 text-4xl md:text-7xl font-extrabold md:my-auto text-skin-base">
+    <h2 class="pt-4 md:p-8 text-4xl md:text-7xl font-extrabold md:my-auto text-skin-base">
       Hi, I'm Hasan! 👋🏾
-    </h1>
-  </div>
-</div>
+    </h2>
+  </header>
+</section>
 
 
 </hero>
@@ -141,12 +209,11 @@
 </main>
     <footer>
       <p>
-        Copyright © 2023 Hasan Ali
+        Copyright &copy; 2023 Hasan Ali
+
       </p>
     </footer>
   
-
-
 
 </body>
 </html>

@@ -1,0 +1,87 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+:root {
+  /* Colors */
+  --color-base: 34, 40, 49;
+  --color-inverted: 232, 232, 232;
+  --color-primary: 253, 186, 116;
+  --color-secondary: 48, 71, 94;
+  --color-secondary-shadow: 74, 93, 117;
+  --color-secondary-inverted: 114, 138, 168;
+  --color-section: 245, 230, 202;
+  --color-section-inverted: 191, 179, 154;
+  --color-section-shadow: 165, 152, 124;
+  --color-accent: 245, 71, 72;
+
+  --opacity: 1;
+  
+  /* Tokens */
+  --text-base: rgba(var(--color-base), var(--opacity));
+  --text-primary: rgba(var(--color-primary), var(--opacity));
+  --text-secondary: rgba(var(--color-secondary), var(--opacity));
+  --text-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
+  --text-inverted: rgba(var(--color-inverted), var(--opacity));
+  --text-accent: rgba(var(--color-accent), var(--opacity));
+        
+  --bg-primary: rgba(var(--color-primary), var(--opacity));
+  --bg-secondary: rgba(var(--color-secondary), var(--opacity));
+  --bg-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
+  --bg-inverted: rgba(var(--color-inverted), var(--opacity));
+  --bg-section: rgba(var(--color-section), var(--opacity));
+  --bg-section-inverted: rgba(var(--color-section-inverted), var(--opacity));
+  --bg-accent: rgba(var(--color-accent), var(--opacity));
+
+  --section-shadow: rgba(var(--color-section-shadow), var(--opacity));
+
+  --fill-base: rgba(var(--color-base), var(--opacity));
+  --fill-primary: rgba(var(--color-primary), var(--opacity));
+  --fill-secondary: rgba(var(--color-secondary), var(--opacity));
+  --fill-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
+  --fill-inverted: rgba(var(--color-inverted), var(--opacity));
+  --fill-section: rgba(var(--color-section), var(--opacity));
+  --fill-accent: rgba(var(--color-accent), var(--opacity));
+  
+  --stroke-base: rgba(var(--color-base), var(--opacity));
+  --stroke-inverted: rgba(var(--color-inverted), var(--opacity));
+  --stroke-accent: rgba(var(--color-accent), var(--opacity));
+      
+  --decoration-secondary: rgba(var(--color-secondary), var(--opacity));
+  --decoration-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
+  --decoration-accent: rgba(var(--color-accent), var(--opacity));
+
+  --divide-base: rgba(var(--color-base), var(--opacity));
+
+  /* Breakpoint for reference only because they don't work in media queries */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Global styles */
+  color: var(--text-base);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-section);
+
+  font-family: "Helvetica Neue", Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img, svg, video, picture {
+  display: block;
+  max-width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+
+}
