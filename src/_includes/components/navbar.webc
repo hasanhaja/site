@@ -1,14 +1,21 @@
 <nav>
   <input type="checkbox" id="menu-toggle" role="button">
-  <label for="menu-toggle">Menu</label>
+  <label for="menu-toggle">
+    <span class="sr-only">Menu</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="hamburger-menu">
+      <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+    </svg>   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close-menu">
+      <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd" />
+    </svg>
+  </label>
   <ul id="primary-navigation">
     <li>
       <a href="/">Home</a>
     </li>
     <li>
       <a href="https://dev.to/hasanhaja">
-        <span>Blog</span> 
-        <span class="external-link">
+        <span>Blog</span><span class="external-link">
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
@@ -31,12 +38,34 @@
 </nav>
 
 <style webc:scoped>
+  nav {
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    
+    color: var(--text-inverted);
+  }
+
   li {
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  li > a {
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    padding-block: 0.25rem;
+    padding-inline-end: 1rem;
+  }
+
+  li > a:hover, li > a:focus, li > a:focus-visible {
+    text-decoration-line: underline;
   }
 
   .external-link {
     display: inline-block;
+    padding-inline-start: 0.125rem;
   }
 
   svg {
@@ -44,11 +73,72 @@
     height: 1.25rem;
   }
 
-  @media (min-width: 768px) {
-    ul {
+  ul {
+    display: none;
+    margin-block-start: 1rem;
+  }
+
+  #menu-toggle:checked ~ ul {
+    display: block;
+  }
+  
+  .hamburger-menu {
+    display: block;
+  }
+
+  .close-menu {
+    display: none;
+  }
+
+  .hamburger-menu, .close-menu {
+    fill: var(--fill-base);
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  #menu-toggle:checked + label > .close-menu {
+    display: block;
+  }
+
+  #menu-toggle:checked + label > .hamburger-menu {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  #menu-toggle + label {
+    position: absolute;
+    inset: 1rem 1rem auto auto;
+    cursor: pointer;
+  }
+
+  @media(min-width: 768px) {
+    nav {
+      background-color: transparent;
+      border-radius: unset;
+      
+      color: var(--text-base);
+    }
+
+    #menu-toggle + label {
+      display: none;
+    }
+
+    #menu-toggle:checked ~ ul, ul {
       display: flex;
       align-items: center;
       gap: 0.5rem;
+    }
+
+    ul {
+      margin: unset;
+    }
+    
+    li > a {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
     }
   }
 </style>

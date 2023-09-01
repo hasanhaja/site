@@ -15,8 +15,6 @@
 
 <style webc:scoped>
   .header-container {
-    display: flex;
-    justify-content: space-between;
     padding: 1rem;
   }
 
@@ -57,5 +55,12 @@
   /* Reset anchor styles for active links */
   a:active {
     color: inherit;
+  }
+
+  @media(min-width: 768px) {
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 </style>

@@ -16,8 +16,8 @@
 
     <style>.wfesxpowo section{background-color:var(--bg-primary)}.wfesxpowo header{padding-inline:1rem;padding-block:4rem;text-align:center}.wfesxpowo img{border-radius:50%;max-width:16rem;max-height:16rem;margin-inline:auto}.wfesxpowo h2{font-size:2.25rem;font-weight:800;padding-block-start:1rem}@media (min-width:768px){.wfesxpowo header{padding:5rem;display:flex;gap:4rem;justify-content:center}.wfesxpowo img{max-width:18rem;max-height:18rem;margin-inline:unset}.wfesxpowo h2{font-size:4.5rem;padding:2rem;margin-block:auto}}
 .wu4ybzcxl a:hover{color:var(--link-hover-accent)}.wu4ybzcxl a[data-accent-theme="cruk"]{--link-hover-accent: #e40085}.wu4ybzcxl a[data-accent-theme="nextjs"]{--link-hover-accent: #0070f3}.wu4ybzcxl a[data-accent-theme="solidjs"]{--link-hover-accent: #446b9e}.wu4ybzcxl a[data-accent-theme="astro"]{--link-hover-accent: #c026d3}
-.wjliadsnj li{list-style:none}.wjliadsnj .external-link{display:inline-block}.wjliadsnj svg{width:1.25rem;height:1.25rem}@media (min-width:768px){.wjliadsnj ul{display:flex;align-items:center;gap:0.5rem}}
-.w28-df8ga .header-container{display:flex;justify-content:space-between;padding:1rem}.w28-df8ga .logo{display:flex;gap:0.5rem;align-items:center}.w28-df8ga .logo>svg{width:2.5rem;height:2.5rem;fill:var(--fill-accent)}.w28-df8ga .logo>p{font-weight:700;font-size:1.875rem;color:var(--text-accent)}.w28-df8ga a{color:inherit;text-decoration:none}.w28-df8ga a:visited{color:inherit}.w28-df8ga a:hover{text-decoration:underline}.w28-df8ga a:active{color:inherit}
+.wxdpfyfz2 nav{background-color:var(--bg-secondary);border-radius:var(--radius-md);color:var(--text-inverted)}.wxdpfyfz2 li{list-style:none;display:flex;justify-content:flex-end}.wxdpfyfz2 li>a{font-size:1.5rem;line-height:2rem;padding-block:0.25rem;padding-inline-end:1rem}.wxdpfyfz2 li>a:hover,.wxdpfyfz2 li>a:focus,.wxdpfyfz2 li>a:focus-visible{text-decoration-line:underline}.wxdpfyfz2 .external-link{display:inline-block;padding-inline-start:0.125rem}.wxdpfyfz2 svg{width:1.25rem;height:1.25rem}.wxdpfyfz2 ul{display:none;margin-block-start:1rem}.wxdpfyfz2 #menu-toggle:checked~ul{display:block}.wxdpfyfz2 .hamburger-menu{display:block}.wxdpfyfz2 .close-menu{display:none}.wxdpfyfz2 .hamburger-menu,.wxdpfyfz2 .close-menu{fill:var(--fill-base);width:2.5rem;height:2.5rem}.wxdpfyfz2 #menu-toggle:checked+label>.close-menu{display:block}.wxdpfyfz2 #menu-toggle:checked+label>.hamburger-menu{display:none}.wxdpfyfz2 #menu-toggle{display:none}.wxdpfyfz2 #menu-toggle+label{position:absolute;inset:1rem 1rem auto auto;cursor:pointer}@media (min-width:768px){.wxdpfyfz2 nav{background-color:transparent;border-radius:unset;color:var(--text-base)}.wxdpfyfz2 #menu-toggle+label{display:none}.wxdpfyfz2 #menu-toggle:checked~ul,.wxdpfyfz2 ul{display:flex;align-items:center;gap:0.5rem}.wxdpfyfz2 ul{margin:unset}.wxdpfyfz2 li>a{font-size:1.875rem;line-height:2.25rem}}
+.wzwsyilhf .header-container{padding:1rem}.wzwsyilhf .logo{display:flex;gap:0.5rem;align-items:center}.wzwsyilhf .logo>svg{width:2.5rem;height:2.5rem;fill:var(--fill-accent)}.wzwsyilhf .logo>p{font-weight:700;font-size:1.875rem;color:var(--text-accent)}.wzwsyilhf a{color:inherit;text-decoration:none}.wzwsyilhf a:visited{color:inherit}.wzwsyilhf a:hover{text-decoration:underline}.wzwsyilhf a:active{color:inherit}@media (min-width:768px){.wzwsyilhf .header-container{display:flex;justify-content:space-between}}
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -79,6 +79,9 @@
 
   --divide-base: rgba(var(--color-base), var(--opacity));
 
+  /* Radii */ 
+  --radius-md: 0.375rem;
+
   /* Breakpoint for reference only because they don't work in media queries */
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
@@ -102,13 +105,23 @@ img, svg, video, picture {
   max-width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media(prefers-color-scheme: dark) {
 
 }</style>
 		<script></script>
   </head>
   <body>
-    <site-header class="w28-df8ga"><header class="header-container">
+    <site-header class="wzwsyilhf"><header class="header-container">
   <div class="logo">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path>
@@ -118,17 +131,24 @@ img, svg, video, picture {
       <a href="/">@hasanhaja</a>
     </p>
   </div>
-  <navbar class="wjliadsnj"><nav>
+  <navbar class="wxdpfyfz2"><nav>
   <input type="checkbox" id="menu-toggle" role="button">
-  <label for="menu-toggle">Menu</label>
+  <label for="menu-toggle">
+    <span class="sr-only">Menu</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="hamburger-menu">
+      <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd"></path>
+    </svg>   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close-menu">
+      <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
+    </svg>
+  </label>
   <ul id="primary-navigation">
     <li>
       <a href="/">Home</a>
     </li>
     <li>
       <a href="https://dev.to/hasanhaja">
-        <span>Blog</span> 
-        <span class="external-link">
+        <span>Blog</span><span class="external-link">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
           </svg>
