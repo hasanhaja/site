@@ -3,21 +3,21 @@ layout: layouts/layout.webc
 ---
 
 <hero></hero>
-<div class="bg-skin-section rounded-md my-4">
+<div>
   <section>
-    <h1 class="text-4xl text-skin-secondary underline decoration-4 decoration-skin-secondaryInverted md:text-5xl font-bold pb-4">🤖 About me</h1>
-    <p class="pb-3">
+    <h2>🤖 About me</h2>
+    <p>
       I'm a Software Engineer @
       <a
         data-accent-theme="cruk"
-        class="transition underline hover:text-[#e40085] font-bold hover:font-extrabold"
+        class="transition underline font-bold hover:font-extrabold"
         href="https://www.cancerresearchuk.org/"
       >
         Cancer Research UK
       </a>, building
       <a
         data-accent-theme="nextjs"
-        class="transition underline hover:text-[#0070f3] font-bold hover:font-extrabold"
+        class="transition underline font-bold hover:font-extrabold"
         href="https://nextjs.org/"
       >
         Next.js
@@ -26,13 +26,13 @@ layout: layouts/layout.webc
       web technologies. I'm currently playing with
       <a
         data-accent-theme="solidjs"
-        class="transition underline hover:text-[#446b9e] font-bold hover:font-extrabold"
+        class="transition underline font-bold hover:font-extrabold"
         href="https://www.solidjs.com/"
       >
         Solid
       </a> and <a
         data-accent-theme="astro"
-        class="transition underline hover:text-[#c026d3] font-bold hover:font-extrabold"
+        class="transition underline font-bold hover:font-extrabold"
         href="https://astro.build/"
       >
         🚀 Astro
@@ -76,6 +76,20 @@ layout: layouts/layout.webc
 </div>
 
 <style webc:scoped>
+  section {
+    margin-inline: auto;
+    max-width: var(--breakpoint-xl);
+
+    margin-block-start: 4rem;
+    padding-inline: 1rem;
+  }
+
+  a {
+    font-weight: 700;
+    color: var(--text-base);
+    transition: color 150ms ease-in-out;
+  }
+
   a:hover {
     color: var(--link-hover-accent);
   }
@@ -94,6 +108,33 @@ layout: layouts/layout.webc
   
   a[data-accent-theme="astro"] {
     --link-hover-accent: #c026d3; 
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+
+    color: var(--text-secondary);
+    font-weight: 700;
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-color: var(--decoration-secondary-inverted);
+    padding-block-end: 1rem;
+  }
+
+  p {
+    padding-block-end: 0.75rem;
+  }
+
+  @media(min-width: 768px) {
+    section {
+      padding-inline: 2.5rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+      line-height: 1;
+    }
   }
 </style>
 
