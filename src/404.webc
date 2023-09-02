@@ -1,0 +1,53 @@
+---
+title: 404 Page not found
+layout: layouts/layout.webc
+permalink: 404.html
+---
+<section>
+  <header>
+    <h1>404 not found</h1>
+    <div>
+      <p>
+        Sorry, I'm still slowly building all of these pages! 🏗
+      </p>
+      <img
+        src="/assets/404_temp.png"
+        alt="Website under construction image with crane next a laptop with orange cones."
+      />
+    </div>
+  </header>
+</section>
+
+<style webc:scoped>
+  header {
+    max-width: var(--breakpoint-xl);
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    padding-block-end: 1rem;
+  }
+
+  div {
+    margin-block-end: 0.5rem;
+    text-align: center;
+  }
+
+  img {
+    border-radius: var(--radius-md);
+    margin-inline: auto;
+    width: 75%;
+  }
+
+  div > p {
+    font-size: 1.25rem;
+    line-height: 1.75rem; 
+    padding-block-end: 0.5rem;
+  }
+</style>
+
+
