@@ -73,8 +73,15 @@
   color: var(--text-base);
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
   background-color: var(--bg-section);
 
   font-family: "Helvetica Neue", Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

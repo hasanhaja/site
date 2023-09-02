@@ -30,3 +30,19 @@
     </footer>
   </body>
 </html>
+
+<style webc:scoped>
+  footer {
+    margin-top: auto;
+    background-color: var(--bg-secondary);
+    padding-inline: 1rem;
+    padding-block-start: 2rem;
+    padding-block-end: 1rem;
+  }
+
+  footer > p {
+    color: var(--text-inverted);
+    max-width: var(--breakpoint-xl);
+    margin-inline: auto;
+  }
+</style>
