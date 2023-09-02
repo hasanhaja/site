@@ -1,49 +1,84 @@
 <div class="social-container">
-  <div class="flex">
-    <div class="bg-skin-secondary rounded-l-md">
-      <p class="text-3xl font-bold text-skin-inverted p-5 sm:p-7 sm:text-4xl">
-        Social
-      </p>
-    </div>
-    <div
-      class="flex gap-2 justify-between px-[8%] sm:px-0 sm:gap-10 sm:justify-center items-center w-full"
-    >
-      <a href="https://twitter.com/hasanhaja">
-        <img
-          class="w-14 hover:mix-blend-multiply"
-          src="/assets/twitter.png"
-          alt="Blue Twitter bird logo"
-        />
-      </a>
-      <a href="https://www.linkedin.com/in/hasanhaja/">
-        <img
-          class="w-14 hover:mix-blend-multiply"
-          src="/assets/linkedin.png"
-          alt="Blue LinkedIn logo"
-        />
-      </a>
-      <a href="https://github.com/hasanhaja">
-        <img
-          class="w-14 hover:opacity-40"
-          src="/assets/github.png"
-          alt="Black GitHub logo"
-        />
-      </a>
-    </div>
+  <p>Social</p>
+  <div class="icons">
+    <a href="https://twitter.com/hasanhaja">
+      <img
+        class="blend-multiply"
+        src="/assets/twitter.png"
+        alt="Blue Twitter bird logo"
+      />
+    </a>
+    <a href="https://www.linkedin.com/in/hasanhaja/">
+      <img
+        class="blend-multiply"
+        src="/assets/linkedin.png"
+        alt="Blue LinkedIn logo"
+      />
+    </a>
+    <a href="https://github.com/hasanhaja">
+      <img
+        class="reduce-opacity"
+        src="/assets/github.png"
+        alt="Black GitHub logo"
+      />
+    </a>
   </div>
 </div>
 
 <style webc:scoped>
   .social-container {
-    background-color: var(--bg-inverted);
+    background-color: var(--bg-secondary);
     border-radius: var(--radius-md);
 
     margin-block: 0.5rem;
-    max-width: var(--breakpoint-lg);
+    max-width: 32rem;
     margin-inline: auto;
+
+    display: flex;
+  }
+
+  :host p {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+
+    font-weight: 700;
+    color: var(--text-inverted);
+    padding: 1.25rem;
   }
 
   img {
     width: 3.5rem;
+  }
+
+  .blend-multiply:hover {
+    mix-blend-mode: multiply;
+  }
+
+  .reduce-opacity:hover {
+    opacity: 0.4; 
+  }
+
+  .icons {
+    background-color: var(--bg-inverted);
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-inline: 8%;
+  }
+
+  @media(min-width: 640px) {
+    :host p {
+      padding: 1.75rem;
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+
+    .icons {
+      padding-inline: unset;
+      gap: 2.5rem;
+      justify-content: center;
+    }
   }
 </style>
