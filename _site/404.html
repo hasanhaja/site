@@ -16,7 +16,7 @@
 
     <style>.wlduo905i header{max-width:var(--breakpoint-xl);margin-inline:auto;padding-inline:1rem}.wlduo905i h1{font-size:1.5rem;line-height:2rem;font-weight:700;padding-block-end:1rem}.wlduo905i div{margin-block-end:0.5rem;text-align:center}.wlduo905i img{border-radius:var(--radius-md);margin-inline:auto;width:75%}.wlduo905i div>p{font-size:1.25rem;line-height:1.75rem;padding-block-end:0.5rem}
 .wnc_wyukt nav{background-color:var(--bg-secondary);border-radius:var(--radius-md);color:var(--text-inverted)}.wnc_wyukt li{list-style:none;display:flex;justify-content:flex-end}.wnc_wyukt li>a{font-size:1.5rem;line-height:2rem;font-weight:400;padding-block:0.25rem;padding-inline-end:1rem}.wnc_wyukt li>a:hover,.wnc_wyukt li>a:focus,.wnc_wyukt li>a:focus-visible{text-decoration-line:underline}.wnc_wyukt .external-link{display:inline-block;padding-inline-start:0.125rem}.wnc_wyukt svg{width:1.25rem;height:1.25rem}.wnc_wyukt ul{display:none;margin-block-start:1rem}.wnc_wyukt #menu-toggle:checked~ul{display:block}.wnc_wyukt .hamburger-menu{display:block}.wnc_wyukt .close-menu{display:none}.wnc_wyukt .hamburger-menu,.wnc_wyukt .close-menu{fill:var(--fill-base);width:2.5rem;height:2.5rem}.wnc_wyukt #menu-toggle:checked+label>.close-menu{display:block}.wnc_wyukt #menu-toggle:checked+label>.hamburger-menu{display:none}.wnc_wyukt #menu-toggle{display:none}.wnc_wyukt #menu-toggle+label{position:absolute;inset:1rem 1rem auto auto;cursor:pointer}@media (min-width:768px){.wnc_wyukt nav{background-color:transparent;border-radius:unset;color:var(--text-base)}.wnc_wyukt #menu-toggle+label{display:none}.wnc_wyukt #menu-toggle:checked~ul,.wnc_wyukt ul{display:flex;align-items:center;gap:0.5rem}.wnc_wyukt ul{margin:unset}.wnc_wyukt li>a{font-size:1.875rem;line-height:2.25rem}}
-.wp_ftou1q header{padding:1rem;margin-inline:auto;max-width:var(--breakpoint-xl)}.wp_ftou1q .logo{display:flex;gap:0.5rem;align-items:center}.wp_ftou1q .logo>svg{width:2.5rem;height:2.5rem;fill:var(--fill-accent)}.wp_ftou1q .logo>p{font-weight:700;font-size:1.875rem;line-height:2.25rem;color:var(--text-accent)}.wp_ftou1q a{color:inherit;text-decoration:none}.wp_ftou1q a:visited{color:inherit}.wp_ftou1q a:hover{text-decoration:underline}.wp_ftou1q a:active{color:inherit}.wp_ftou1q .logo>p>a:hover{text-decoration:none}@media (min-width:768px){.wp_ftou1q header{display:flex;justify-content:space-between;align-items:center}.wp_ftou1q .logo>p{font-size:2.25rem;line-height:2.5rem}}@media (min-width:1280px){.wp_ftou1q .logo>p{font-size:3rem;line-height:1}}
+.wk-nfhgyy header{padding:1rem;margin-inline:auto;max-width:var(--breakpoint-xl)}.wk-nfhgyy .logo{display:flex;gap:0.5rem;align-items:center}.wk-nfhgyy .logo>svg{width:2.5rem;height:2.5rem;fill:var(--fill-accent)}.wk-nfhgyy .logo>p{font-weight:700;font-size:1.875rem;line-height:2.25rem;color:var(--text-accent)}.wk-nfhgyy a{color:inherit;text-decoration:none}.wk-nfhgyy a:visited{color:inherit}.wk-nfhgyy a:hover,.wk-nfhgyy a:focus,.wk-nfhgyy a:focus-visible{text-decoration:underline}.wk-nfhgyy a:active{color:inherit}.wk-nfhgyy .logo>p>a:hover{text-decoration:none}@media (min-width:768px){.wk-nfhgyy header{display:flex;justify-content:space-between;align-items:center}.wk-nfhgyy .logo>p{font-size:2.25rem;line-height:2.5rem}}@media (min-width:1280px){.wk-nfhgyy .logo>p{font-size:3rem;line-height:1}}
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -32,6 +32,7 @@
   --color-base: 34, 40, 49;
   --color-inverted: 232, 232, 232;
   --color-primary: 253, 186, 116;
+  --color-primary-shadow: 19, 128, 134;
   --color-secondary: 48, 71, 94;
   --color-secondary-shadow: 74, 93, 117;
   --color-secondary-inverted: 114, 138, 168;
@@ -58,6 +59,7 @@
   --bg-section-inverted: rgba(var(--color-section-inverted), var(--opacity));
   --bg-accent: rgba(var(--color-accent), var(--opacity));
 
+  --primary-shadow: rgba(var(--color-primary-shadow), var(--opacity));
   --section-shadow: rgba(var(--color-section-shadow), var(--opacity));
 
   --fill-base: rgba(var(--color-base), var(--opacity));
@@ -80,6 +82,7 @@
 
   /* Radii */ 
   --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
 
   /* Breakpoint for reference only because they don't work in media queries */
   --breakpoint-sm: 640px;
@@ -200,7 +203,7 @@ footer > p {
 		<script></script>
   </head>
   <body>
-    <site-header class="wp_ftou1q"><header>
+    <site-header class="wk-nfhgyy"><header>
   <div class="logo">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path>

@@ -27,7 +27,7 @@ layout: layouts/layout.webc
 
 <div class="page-container">
   <h1 @html="this.displayTitle"></h1>
-  <toc :@toc-content="tocContent"></toc>
+  <toc :@toc-content="tocContent" webc:nokeep></toc>
   <article class="info-article">
     <section webc:for="(html, index) of content" @html="html" :id="tocContent[index].id"></section>
   </article>

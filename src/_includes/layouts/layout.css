@@ -13,6 +13,7 @@
   --color-base: 34, 40, 49;
   --color-inverted: 232, 232, 232;
   --color-primary: 253, 186, 116;
+  --color-primary-shadow: 19, 128, 134;
   --color-secondary: 48, 71, 94;
   --color-secondary-shadow: 74, 93, 117;
   --color-secondary-inverted: 114, 138, 168;
@@ -39,6 +40,7 @@
   --bg-section-inverted: rgba(var(--color-section-inverted), var(--opacity));
   --bg-accent: rgba(var(--color-accent), var(--opacity));
 
+  --primary-shadow: rgba(var(--color-primary-shadow), var(--opacity));
   --section-shadow: rgba(var(--color-section-shadow), var(--opacity));
 
   --fill-base: rgba(var(--color-base), var(--opacity));
@@ -61,6 +63,7 @@
 
   /* Radii */ 
   --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
 
   /* Breakpoint for reference only because they don't work in media queries */
   --breakpoint-sm: 640px;
