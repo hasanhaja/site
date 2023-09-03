@@ -1,9 +1,21 @@
 ---
 layout: layouts/layout.webc
 ---
+<script webc:setup>
+  const getReformattedContent = () => {
+    const result = this.content
+      .split("<h2>")
+      .filter(str => str !== "")
+      .map(str => `<h2>${str}`);
+    return result;
+  }
+</script>
+
 <div class="page-container">
   <h1 @html="this.displayTitle"></h1>
-  <article class="info-article"  @html="this.content"></article>
+  <article class="info-article">
+    <section webc:for="(contentHtml, index) of getReformattedContent()" @html="contentHtml" :id="`section-${index}`"></section>
+  </article>
 <div>
 
 <style>
@@ -12,10 +24,27 @@ layout: layouts/layout.webc
     max-width: var(--breakpoint-xl);
     margin-inline: auto;
   }
+
+  .info-article > section {
+    padding-block-start: 2rem;
+    padding-block-end: 3rem;
+    border-block-end: solid;
+    border-block-color: var(--stroke-base);
+    border-block-end-width: 1px;
+  }
+
+  .info-article > section:last-child {
+    border-block-end: none;
+  }
   
   @media(min-width: 768px) {
     .info-article {
       padding-inline: 1.5rem;
+    }
+
+    .info-article > section {
+      padding-block-start: 2.5rem;
+      padding-block-end: 3.5rem;
     }
   }
 </style>

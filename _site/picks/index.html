@@ -19,10 +19,27 @@
     max-width: var(--breakpoint-xl);
     margin-inline: auto;
   }
+
+  .info-article > section {
+    padding-block-start: 2rem;
+    padding-block-end: 3rem;
+    border-block-end: solid;
+    border-block-color: var(--stroke-base);
+    border-block-end-width: 1px;
+  }
+
+  .info-article > section:last-child {
+    border-block-end: none;
+  }
   
   @media(min-width: 768px) {
     .info-article {
       padding-inline: 1.5rem;
+    }
+
+    .info-article > section {
+      padding-block-start: 2.5rem;
+      padding-block-end: 3.5rem;
     }
   }
 .wnc_wyukt nav{background-color:var(--bg-secondary);border-radius:var(--radius-md);color:var(--text-inverted)}.wnc_wyukt li{list-style:none;display:flex;justify-content:flex-end}.wnc_wyukt li>a{font-size:1.5rem;line-height:2rem;font-weight:400;padding-block:0.25rem;padding-inline-end:1rem}.wnc_wyukt li>a:hover,.wnc_wyukt li>a:focus,.wnc_wyukt li>a:focus-visible{text-decoration-line:underline}.wnc_wyukt .external-link{display:inline-block;padding-inline-start:0.125rem}.wnc_wyukt svg{width:1.25rem;height:1.25rem}.wnc_wyukt ul{display:none;margin-block-start:1rem}.wnc_wyukt #menu-toggle:checked~ul{display:block}.wnc_wyukt .hamburger-menu{display:block}.wnc_wyukt .close-menu{display:none}.wnc_wyukt .hamburger-menu,.wnc_wyukt .close-menu{fill:var(--fill-base);width:2.5rem;height:2.5rem}.wnc_wyukt #menu-toggle:checked+label>.close-menu{display:block}.wnc_wyukt #menu-toggle:checked+label>.hamburger-menu{display:none}.wnc_wyukt #menu-toggle{display:none}.wnc_wyukt #menu-toggle+label{position:absolute;inset:1rem 1rem auto auto;cursor:pointer}@media (min-width:768px){.wnc_wyukt nav{background-color:transparent;border-radius:unset;color:var(--text-base)}.wnc_wyukt #menu-toggle+label{display:none}.wnc_wyukt #menu-toggle:checked~ul,.wnc_wyukt ul{display:flex;align-items:center;gap:0.5rem}.wnc_wyukt ul{margin:unset}.wnc_wyukt li>a{font-size:1.875rem;line-height:2.25rem}}
@@ -255,7 +272,8 @@ footer > p {
 </site-header>
     <main><div class="page-container">
   <h1>My top picks</h1>
-  <article class="info-article"><h2>Frontend tools</h2>
+  <article class="info-article">
+    <section id="section-0"><h2>Frontend tools</h2>
 <p>React will always have a special place in my heart because it was my gateway into the frontend world (and it's still paying the bills, lol). It rightfully brought me out of a world where I was building web applications in Java, and today I happily put up with all the chaos that is the modern frontend. These are my favorite technologies right now:</p>
 <ul>
 <li>Solid</li>
@@ -263,7 +281,8 @@ footer > p {
 <li>Tailwind</li>
 <li>Plain ol' HTML and CSS</li>
 </ul>
-<h2>Fullstack, serverless &amp; more</h2>
+</section>
+<section id="section-1"><h2>Fullstack, serverless &amp; more</h2>
 <p>I definitely got thrown in the deep end with these ideas and technologies, but it's really shaped my understand of fullstack web applications and serverless technologies. Even though I started with Next.js (straight from <code>create-react-app</code> without a clue in the world of what's even possible), it wasn't until Deno's Fresh and Astro that things really started clicking. This is pretty much the order in which I made that journey:</p>
 <ul>
 <li>11ty</li>
@@ -274,7 +293,8 @@ footer > p {
 <li>AWS CDK</li>
 <li>Next.js</li>
 </ul>
-<h2>Programming languages</h2>
+</section>
+<section id="section-2"><h2>Programming languages</h2>
 <p>I'm quite a programming language geek! I may not be great at many of them, but I absolutely adore them. These are my top favorites:</p>
 <ul>
 <li>TypeScript</li>
@@ -284,7 +304,8 @@ footer > p {
 <li>Java</li>
 <li>C++</li>
 </ul>
-<h2>Podcasts &amp; YouTube Channels</h2>
+</section>
+<section id="section-3"><h2>Podcasts &amp; YouTube Channels</h2>
 <p>I consume this content virtually every single day:</p>
 <ul>
 <li>JavaScript Jabber</li>
@@ -295,7 +316,8 @@ footer > p {
 <li>Ryan Carniato's streams and VODs</li>
 <li>Kevin Powells YouTube channel</li>
 </ul>
-</article>
+</section>
+  </article>
 <div>
 
 
