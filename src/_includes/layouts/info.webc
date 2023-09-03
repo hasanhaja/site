@@ -9,10 +9,25 @@ layout: layouts/layout.webc
       .map(str => `<h2>${str}`);
     return result;
   }
+
+  const getSectionTitles = () => {
+    const regex = /<h2>(.*?)<\/h2>/gs;
+    const rawContent = this.content;
+    const result = [...rawContent.matchAll(regex)];
+    
+    const sectionTitles = result.map(match => match[1]);
+
+    return sectionTitles;
+  }
 </script>
 
 <div class="page-container">
   <h1 @html="this.displayTitle"></h1>
+  <aside>
+    <ol>
+      <li webc:for="title of getSectionTitles()" @html="title"></li>
+    </ol>
+  <aside>
   <article class="info-article">
     <section webc:for="(contentHtml, index) of getReformattedContent()" @html="contentHtml" :id="`section-${index}`"></section>
   </article>
