@@ -1,0 +1,21 @@
+---
+layout: layouts/layout.webc
+---
+<div class="page-container">
+  <h1 @html="this.displayTitle"></h1>
+  <article class="info-article"  @html="this.content"></article>
+<div>
+
+<style>
+  .page-container {
+    padding: 1rem;
+    max-width: var(--breakpoint-xl);
+    margin-inline: auto;
+  }
+  
+  @media(min-width: 768px) {
+    .info-article {
+      padding-inline: 1.5rem;
+    }
+  }
+</style>

@@ -32,6 +32,10 @@
     font-weight: 800;
 
     padding-block-start: 1rem;
+
+    color: var(--text-base);
+    text-decoration: none;
+    margin-block-end: unset;
   }
 
   @media(min-width: 768px) {

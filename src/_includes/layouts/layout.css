@@ -92,6 +92,59 @@ img, svg, video, picture {
   max-width: 100%;
 }
 
+code, kbd, samp, pre {
+  font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  margin-block-end: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  color: var(--text-secondary);
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--decoration-secondary-inverted);
+  margin-block-end: 0.75rem;
+}
+
+ol, ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+li::marker {
+  color: var(--decoration-accent); 
+}
+
+a {
+  font-weight: 700;
+  color: var(--text-base);
+  transition: color 150ms ease-in-out;
+}
+
+footer {
+  margin-top: auto;
+  background-color: var(--bg-secondary);
+  padding-inline: 1rem;
+  padding-block-start: 2rem;
+  padding-block-end: 1rem;
+}
+
+footer > p {
+  color: var(--text-inverted);
+  max-width: var(--breakpoint-xl);
+  margin-inline: auto;
+}
+
 .sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -100,6 +153,20 @@ img, svg, video, picture {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+@media(min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-block-end: 2rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin-block-end: 1rem;
+  }
 }
 
 @media(prefers-color-scheme: dark) {

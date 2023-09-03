@@ -1,7 +1,7 @@
 ---
 layout: layouts/layout.webc
 ---
-
+<h1 class="sr-only">hasanhaja Home Page</h1>
 <hero></hero>
 <div>
   <section>
@@ -51,12 +51,6 @@ layout: layouts/layout.webc
     padding-inline: 1rem;
   }
 
-  a {
-    font-weight: 700;
-    color: var(--text-base);
-    transition: color 150ms ease-in-out;
-  }
-
   a:hover {
     color: var(--link-hover-accent);
   }
@@ -81,12 +75,7 @@ layout: layouts/layout.webc
     font-size: 2.25rem;
     line-height: 2.5rem;
 
-    color: var(--text-secondary);
-    font-weight: 700;
-    text-decoration-line: underline;
-    text-decoration-thickness: 4px;
-    text-decoration-color: var(--decoration-secondary-inverted);
-    padding-block-end: 1rem;
+    margin-block-end: 1rem;
   }
 
   .section-content {
@@ -101,6 +90,7 @@ layout: layouts/layout.webc
     .section-heading {
       font-size: 3rem;
       line-height: 1;
+      margin-block-end: 1.25rem;
     }
   }
 </style>
