@@ -10,26 +10,26 @@ layout: layouts/layout.webc
     return result;
   }
 
-  const getSectionTitles = () => {
+  const getTocContent = () => {
     const regex = /<h2>(.*?)<\/h2>/gs;
     const rawContent = this.content;
     const result = [...rawContent.matchAll(regex)];
     
     const sectionTitles = result.map(match => match[1]);
+    const content = sectionTitles.map((title, index) => ({ title, id: `section-${index}` }));
 
-    return sectionTitles;
+    return content;
   }
+
+  const content = getReformattedContent();
+  const tocContent = getTocContent();
 </script>
 
 <div class="page-container">
   <h1 @html="this.displayTitle"></h1>
-  <aside>
-    <ol>
-      <li webc:for="title of getSectionTitles()" @html="title"></li>
-    </ol>
-  <aside>
+  <toc :@toc-content="tocContent"></toc>
   <article class="info-article">
-    <section webc:for="(contentHtml, index) of getReformattedContent()" @html="contentHtml" :id="`section-${index}`"></section>
+    <section webc:for="(html, index) of content" @html="html" :id="tocContent[index].id"></section>
   </article>
 <div>
 

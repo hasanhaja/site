@@ -117,6 +117,7 @@
 
   /* Global styles */
   color: var(--text-base);
+  scroll-behavior: smooth;
 }
 
 html {
@@ -162,12 +163,17 @@ h2 {
   margin-block-end: 0.75rem;
 }
 
-ol, ul {
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+ul {
   list-style-type: disc;
   list-style-position: inside;
 }
 
-li::marker {
+ul > li::marker {
   color: var(--decoration-accent); 
 }
 
@@ -273,13 +279,27 @@ footer > p {
     <main><div class="page-container">
   <h1>My top picks</h1>
   <aside>
-    <ol>
-      <li>Frontend tools</li>
-<li>Fullstack, serverless &amp; more</li>
-<li>Programming languages</li>
-<li>Podcasts &amp; YouTube Channels</li>
-    </ol>
-  <aside>
+  <nav>
+    <section>
+      <h2>Contents</h2>
+      <ol>
+        <li>
+          <a href="#section-0">Frontend tools</a>
+        </li>
+<li>
+          <a href="#section-1">Fullstack, serverless &amp; more</a>
+        </li>
+<li>
+          <a href="#section-2">Programming languages</a>
+        </li>
+<li>
+          <a href="#section-3">Podcasts &amp; YouTube Channels</a>
+        </li>
+      </ol>
+    </section>
+  </nav>
+</aside>
+
   <article class="info-article">
     <section id="section-0"><h2>Frontend tools</h2>
 <p>React will always have a special place in my heart because it was my gateway into the frontend world (and it's still paying the bills, lol). It rightfully brought me out of a world where I was building web applications in Java, and today I happily put up with all the chaos that is the modern frontend. These are my favorite technologies right now:</p>
@@ -329,7 +349,7 @@ footer > p {
 <div>
 
 
-</div></aside></aside></div></main>
+</div></div></main>
     <footer>
       <p>
         Copyright &copy; 2023 Hasan Ali

@@ -1,0 +1,12 @@
+<aside>
+  <nav>
+    <section>
+      <h2>Contents</h2>
+      <ol>
+        <li webc:for="content of tocContent">
+          <a :href="`#${content.id}`" @html="content.title"></a>
+        </li>
+      </ol>
+    </section>
+  </nav>
+</aside>
