@@ -7,7 +7,7 @@
     <title @html="this.title ? `@hasanhaja | ${this.title}` : '@hasanhaja'"></title>
     <meta
       name="description"
-      content="Fullstack portfolio web app built in 11ty"
+      content="I'm Hasan (@hasanhaja). I'm a software engineer and a web enthusiast."
     >
     <meta name="color-scheme" content="dark light">
     <link rel="stylesheet" href="layout.css">
