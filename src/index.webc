@@ -10,33 +10,30 @@ layout: layouts/layout.webc
       I'm a Software Engineer @
       <a
         data-accent-theme="cruk"
-        class="transition underline font-bold hover:font-extrabold"
         href="https://www.cancerresearchuk.org/"
       >
         Cancer Research UK
       </a>, building
       <a
         data-accent-theme="nextjs"
-        class="transition underline font-bold hover:font-extrabold"
         href="https://nextjs.org/"
       >
         Next.js
       </a>
       apps. I love the web and I spend a lot of my time learning and playing with
-      web technologies. I'm currently playing with
+      web technologies. I'm a fan of
       <a
         data-accent-theme="solidjs"
-        class="transition underline font-bold hover:font-extrabold"
         href="https://www.solidjs.com/"
-      >
-        Solid
-      </a> and <a
+      >Solid</a> and
+      <a
         data-accent-theme="astro"
-        class="transition underline font-bold hover:font-extrabold"
         href="https://astro.build/"
-      >
-        🚀 Astro
-      </a>.
+      >🚀Astro</a>, and I'm currently playing with
+      <a
+        data-accent-theme="11ty"
+        href="https://www.11ty.dev/"
+      >🎈11ty</a>.
     </p>
     <social-links></social-links>
   </section>
@@ -69,6 +66,10 @@ layout: layouts/layout.webc
   
   a[data-accent-theme="astro"] {
     --link-hover-accent: #c026d3; 
+  }
+  
+  a[data-accent-theme="11ty"] {
+    --link-hover-accent: #b81414; 
   }
 
   .section-heading {
