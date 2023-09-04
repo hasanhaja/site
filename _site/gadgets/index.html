@@ -14,7 +14,76 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="manifest" href="/assets/site.webmanifest">
 
-    <style>.wnc_wyukt nav{background-color:var(--bg-secondary);border-radius:var(--radius-md);color:var(--text-inverted)}.wnc_wyukt li{list-style:none;display:flex;justify-content:flex-end}.wnc_wyukt li>a{font-size:1.5rem;line-height:2rem;font-weight:400;padding-block:0.25rem;padding-inline-end:1rem}.wnc_wyukt li>a:hover,.wnc_wyukt li>a:focus,.wnc_wyukt li>a:focus-visible{text-decoration-line:underline}.wnc_wyukt .external-link{display:inline-block;padding-inline-start:0.125rem}.wnc_wyukt svg{width:1.25rem;height:1.25rem}.wnc_wyukt ul{display:none;margin-block-start:1rem}.wnc_wyukt #menu-toggle:checked~ul{display:block}.wnc_wyukt .hamburger-menu{display:block}.wnc_wyukt .close-menu{display:none}.wnc_wyukt .hamburger-menu,.wnc_wyukt .close-menu{fill:var(--fill-base);width:2.5rem;height:2.5rem}.wnc_wyukt #menu-toggle:checked+label>.close-menu{display:block}.wnc_wyukt #menu-toggle:checked+label>.hamburger-menu{display:none}.wnc_wyukt #menu-toggle{display:none}.wnc_wyukt #menu-toggle+label{position:absolute;inset:1rem 1rem auto auto;cursor:pointer}@media (min-width:768px){.wnc_wyukt nav{background-color:transparent;border-radius:unset;color:var(--text-base)}.wnc_wyukt #menu-toggle+label{display:none}.wnc_wyukt #menu-toggle:checked~ul,.wnc_wyukt ul{display:flex;align-items:center;gap:0.5rem}.wnc_wyukt ul{margin:unset}.wnc_wyukt li>a{font-size:1.875rem;line-height:2.25rem}}
+    <style>.toc-container {
+    background-color: var(--bg-primary);
+    margin-block-end: 2rem;
+    padding-inline: 1rem;
+    padding-block: 1.25rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0.4rem 0.4rem var(--primary-shadow);
+  }
+  
+  .toc-container ol {
+    font-size: 1.125rem;
+    line-height: 1.75rem;  
+  }
+
+  .toc-container a {
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  /* Reset anchor styles for visited links */
+  .toc-container a:visited {
+    color: inherit;
+  }
+
+  /* Reset anchor styles for links on hover */
+  .toc-container a:hover, .toc-container a:focus, .toc-container a:focus-visible {
+    text-decoration: underline;
+  }
+
+  /* Reset anchor styles for active links */
+  .toc-container a:active {
+    color: inherit;
+  }
+
+  @media(min-width: 768px) {
+    .toc-container {
+      margin-block-end: 2.5rem;
+      padding-inline: 1.5rem;
+      padding-block: 2rem;
+    }
+  }
+.page-container {
+    padding: 1rem;
+    max-width: var(--breakpoint-xl);
+    margin-inline: auto;
+  }
+
+  .info-article > section {
+    padding-block-start: 2rem;
+    padding-block-end: 3rem;
+    border-block-end: solid;
+    border-block-color: var(--stroke-base);
+    border-block-end-width: 1px;
+  }
+
+  .info-article > section:last-child {
+    border-block-end: none;
+  }
+  
+  @media(min-width: 768px) {
+    .info-article {
+      padding-inline: 1.5rem;
+    }
+
+    .info-article > section {
+      padding-block-start: 2.5rem;
+      padding-block-end: 3.5rem;
+    }
+  }
+.wnc_wyukt nav{background-color:var(--bg-secondary);border-radius:var(--radius-md);color:var(--text-inverted)}.wnc_wyukt li{list-style:none;display:flex;justify-content:flex-end}.wnc_wyukt li>a{font-size:1.5rem;line-height:2rem;font-weight:400;padding-block:0.25rem;padding-inline-end:1rem}.wnc_wyukt li>a:hover,.wnc_wyukt li>a:focus,.wnc_wyukt li>a:focus-visible{text-decoration-line:underline}.wnc_wyukt .external-link{display:inline-block;padding-inline-start:0.125rem}.wnc_wyukt svg{width:1.25rem;height:1.25rem}.wnc_wyukt ul{display:none;margin-block-start:1rem}.wnc_wyukt #menu-toggle:checked~ul{display:block}.wnc_wyukt .hamburger-menu{display:block}.wnc_wyukt .close-menu{display:none}.wnc_wyukt .hamburger-menu,.wnc_wyukt .close-menu{fill:var(--fill-base);width:2.5rem;height:2.5rem}.wnc_wyukt #menu-toggle:checked+label>.close-menu{display:block}.wnc_wyukt #menu-toggle:checked+label>.hamburger-menu{display:none}.wnc_wyukt #menu-toggle{display:none}.wnc_wyukt #menu-toggle+label{position:absolute;inset:1rem 1rem auto auto;cursor:pointer}@media (min-width:768px){.wnc_wyukt nav{background-color:transparent;border-radius:unset;color:var(--text-base)}.wnc_wyukt #menu-toggle+label{display:none}.wnc_wyukt #menu-toggle:checked~ul,.wnc_wyukt ul{display:flex;align-items:center;gap:0.5rem}.wnc_wyukt ul{margin:unset}.wnc_wyukt li>a{font-size:1.875rem;line-height:2.25rem}}
 .wk-nfhgyy header{padding:1rem;margin-inline:auto;max-width:var(--breakpoint-xl)}.wk-nfhgyy .logo{display:flex;gap:0.5rem;align-items:center}.wk-nfhgyy .logo>svg{width:2.5rem;height:2.5rem;fill:var(--fill-accent)}.wk-nfhgyy .logo>p{font-weight:700;font-size:1.875rem;line-height:2.25rem;color:var(--text-accent)}.wk-nfhgyy a{color:inherit;text-decoration:none}.wk-nfhgyy a:visited{color:inherit}.wk-nfhgyy a:hover,.wk-nfhgyy a:focus,.wk-nfhgyy a:focus-visible{text-decoration:underline}.wk-nfhgyy a:active{color:inherit}.wk-nfhgyy .logo>p>a:hover{text-decoration:none}@media (min-width:768px){.wk-nfhgyy header{display:flex;justify-content:space-between;align-items:center}.wk-nfhgyy .logo>p{font-size:2.25rem;line-height:2.5rem}}@media (min-width:1280px){.wk-nfhgyy .logo>p{font-size:3rem;line-height:1}}
 *, *::before, *::after {
   box-sizing: border-box;
@@ -251,7 +320,28 @@ footer > p {
 
 
 </site-header>
-    <main><h2>Mechanical keyboard</h2>
+    <main><div class="page-container">
+  <h1>My gadgets</h1>
+  <aside class="toc-container">
+  <nav>
+    <section>
+      <h2>Contents</h2>
+      <ol>
+        <li>
+          <a href="#section-0">Mechanical keyboard</a>
+        </li>
+<li>
+          <a href="#section-1">Speedcubes</a>
+        </li>
+      </ol>
+    </section>
+  </nav>
+</aside>
+
+
+
+  <article class="info-article">
+    <section id="section-0"><h2>Mechanical keyboard</h2>
 <p>I've been using a mechanical keyboard since 2015 and it's only in 2022 that I ventured into the rabbit hole that is custom mechanical keyboards. My current build is:</p>
 <ul>
 <li>Glorious GMMK Pro</li>
@@ -260,7 +350,8 @@ footer > p {
 <li>GPBT Ocean Blue keycaps</li>
 </ul>
 <p>I realize that this is pretty stock and I don't have a single modification or custom part that Glorious doesn't sell, but I see this as my introduction into this world. I've got my eye on Mode SixtyFive for my next build.</p>
-<h2>Speedcubes</h2>
+</section>
+<section id="section-1"><h2>Speedcubes</h2>
 <p>I have quite a few cubes and I really like them all. Learning the 4x4 and 5x5 stretched my brain but that was nothing compared to learning the Square-1. Right now, I'm focusing on the 3x3 and working on my algorithms. I've slowly been building up muscle memory for 2-look OLL and PLL. My main 3x3s at the moment are:</p>
 <ul>
 <li>Tornado V3 M Pioneer</li>
@@ -268,7 +359,12 @@ footer > p {
 <li>Super RS3 M 2022 Base</li>
 </ul>
 <p>I've set these up with a combination of Weight 3, Gravitas, Silk and Mystic. These were the lubes I could get access to and since it was my first time using lubed cubes, I don't have much of a comparison point. I'm trying to get my hands on DNM-37 and setting up one of cubes from scratch to see if that like that additional better.</p>
-</main>
+</section>
+  </article>
+<div>
+
+
+</div></div></main>
     <footer>
       <p>
         Copyright &copy; 2023 Hasan Ali

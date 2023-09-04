@@ -1,5 +1,5 @@
 ---
-layout: layouts/layout.webc
+layout: layouts/info.webc
 title: Gadgets
 displayTitle: My gadgets
 ---
