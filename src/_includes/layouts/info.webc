@@ -2,34 +2,30 @@
 layout: layouts/layout.webc
 ---
 <script webc:setup>
-  const getReformattedContent = () => {
-    const result = this.content
+  const fmtContent = (rawContent) => {
+    const result = rawContent
       .split("<h2>")
       .filter(str => str !== "")
       .map(str => `<h2>${str}`);
     return result;
   }
 
-  const getTocContent = () => {
+  const fmtTocContent = (rawContent) => {
     const regex = /<h2>(.*?)<\/h2>/gs;
-    const rawContent = this.content;
-    const result = [...rawContent.matchAll(regex)];
+    const matches = [...rawContent.matchAll(regex)];
     
-    const sectionTitles = result.map(match => match[1]);
-    const content = sectionTitles.map((title, index) => ({ title, id: `section-${index}` }));
+    const sectionTitles = matches.map(match => match[1]);
+    const result = sectionTitles.map((title, index) => ({ title, id: `section-${index}` }));
 
-    return content;
+    return result;
   }
-
-  const content = getReformattedContent();
-  const tocContent = getTocContent();
 </script>
 
 <div class="page-container">
   <h1 @html="this.displayTitle"></h1>
-  <toc :@toc-content="tocContent" webc:nokeep></toc>
+  <toc :@toc-content="fmtTocContent(this.content)" webc:nokeep></toc>
   <article class="info-article">
-    <section webc:for="(html, index) of content" @html="html" :id="tocContent[index].id"></section>
+    <section webc:for="(html, index) of fmtContent(this.content)" @html="html" :id="fmtTocContent(this.content)[index].id"></section>
   </article>
 <div>
 
