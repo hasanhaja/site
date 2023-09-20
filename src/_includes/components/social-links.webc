@@ -1,26 +1,29 @@
 <div class="social-container">
   <p>Social</p>
   <div class="icons">
-    <a href="https://twitter.com/hasanhaja">
+    <a href="https://twitter.com/hasanhaja" rel="me">
       <img
         class="blend-multiply"
         src="/assets/twitter.png"
         alt="Blue Twitter bird logo"
       />
+      <span class="sr-only">twitter.com/hasanhaja</span>
     </a>
-    <a href="https://www.linkedin.com/in/hasanhaja/">
+    <a href="https://www.linkedin.com/in/hasanhaja/" rel="me">
       <img
         class="blend-multiply"
         src="/assets/linkedin.png"
         alt="Blue LinkedIn logo"
       />
+      <span class="sr-only">www.linkedin.com/in/hasanhaja/</span>
     </a>
-    <a href="https://github.com/hasanhaja">
+    <a href="https://github.com/hasanhaja" rel="me">
       <img
         class="reduce-opacity"
         src="/assets/github.png"
         alt="Black GitHub logo"
       />
+      <span class="sr-only">github.com/hasanhaja</span>
     </a>
   </div>
 </div>
