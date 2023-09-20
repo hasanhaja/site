@@ -14,7 +14,7 @@
       <a href="/">Home</a>
     </li>
     <li>
-      <a href="https://dev.to/hasanhaja">
+      <a href="https://dev.to/hasanhaja" rel="me" target="_blank">
         <span>Blog</span><span class="external-link">
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
