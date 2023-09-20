@@ -1,0 +1,15 @@
+---
+layout: layouts/layout.webc
+title: Links
+---
+<script webc:setup>
+  const links = [
+    "https://github.com/hasanhaja",
+  ];
+</script>
+
+<section>
+  <ul>
+    <li></li>
+  </ul>
+</section>
