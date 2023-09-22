@@ -27,7 +27,7 @@ layout: layouts/layout.webc
   <article class="info-article">
     <section webc:for="(html, index) of fmtContent(this.content)" @html="html" :id="fmtTocContent(this.content)[index].id"></section>
   </article>
-<div>
+</div>
 
 <style>
   .page-container {
