@@ -25,9 +25,19 @@
     font-family: "Helvetica Neue", Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
-  img, svg, video, picture {
+  svg, video, picture {
     display: block;
     max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem; /* or any other default value */
   }
 
   code, kbd, samp, pre {
