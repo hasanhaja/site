@@ -2,7 +2,7 @@
 layout: layouts/layout.webc
 ---
 <div>
-  <h1 @html="this.displayTitle"></h1>
+  <h1 class="sr-only">CV</h1>
   <article @html="this.content">
   </article>
 </div>
