@@ -1,6 +1,6 @@
 ---
 title: 404 Page not found
-layout: layouts/layout.webc
+layout: layouts/base.webc
 permalink: 404.html
 ---
 <section>
