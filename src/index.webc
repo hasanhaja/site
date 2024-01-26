@@ -1,5 +1,5 @@
 ---
-layout: layouts/layout.webc
+layout: layouts/base.webc
 ---
 <h1 class="sr-only">hasanhaja Home Page</h1>
 <hero></hero>
