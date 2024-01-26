@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="Eleventy v2.0.1">
+    <title>@hasanhaja | CV</title>
+    <meta name="description" content="I'm Hasan (@hasanhaja). I'm a software engineer and a web enthusiast.">
+    <meta name="color-scheme" content="dark light">
+    
+    <link href="https://fosstodon.org/@hasanhaja" rel="me">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+
+    <style>
+.wnc_wyukt nav{background-color:var(--bg-secondary);border-radius:var(--radius-md);color:var(--text-inverted)}.wnc_wyukt li{list-style:none;display:flex;justify-content:flex-end}.wnc_wyukt li>a{font-size:1.5rem;line-height:2rem;font-weight:400;padding-block:0.25rem;padding-inline-end:1rem}.wnc_wyukt li>a:hover,.wnc_wyukt li>a:focus,.wnc_wyukt li>a:focus-visible{text-decoration-line:underline}.wnc_wyukt .external-link{display:inline-block;padding-inline-start:0.125rem}.wnc_wyukt svg{width:1.25rem;height:1.25rem}.wnc_wyukt ul{display:none;margin-block-start:1rem}.wnc_wyukt #menu-toggle:checked~ul{display:block}.wnc_wyukt .hamburger-menu{display:block}.wnc_wyukt .close-menu{display:none}.wnc_wyukt .hamburger-menu,.wnc_wyukt .close-menu{fill:var(--fill-base);width:2.5rem;height:2.5rem}.wnc_wyukt #menu-toggle:checked+label>.close-menu{display:block}.wnc_wyukt #menu-toggle:checked+label>.hamburger-menu{display:none}.wnc_wyukt #menu-toggle{display:none}.wnc_wyukt #menu-toggle+label{position:absolute;inset:1rem 1rem auto auto;cursor:pointer}@media (min-width:768px){.wnc_wyukt nav{background-color:transparent;border-radius:unset;color:var(--text-base)}.wnc_wyukt #menu-toggle+label{display:none}.wnc_wyukt #menu-toggle:checked~ul,.wnc_wyukt ul{display:flex;align-items:center;gap:0.5rem}.wnc_wyukt ul{margin:unset}.wnc_wyukt li>a{font-size:1.875rem;line-height:2.25rem}}
+.wk-nfhgyy header{padding:1rem;margin-inline:auto;max-width:var(--breakpoint-xl)}.wk-nfhgyy .logo{display:flex;gap:0.5rem;align-items:center}.wk-nfhgyy .logo>svg{width:2.5rem;height:2.5rem;fill:var(--fill-accent)}.wk-nfhgyy .logo>p{font-weight:700;font-size:1.875rem;line-height:2.25rem;color:var(--text-accent)}.wk-nfhgyy a{color:inherit;text-decoration:none}.wk-nfhgyy a:visited{color:inherit}.wk-nfhgyy a:hover,.wk-nfhgyy a:focus,.wk-nfhgyy a:focus-visible{text-decoration:underline}.wk-nfhgyy a:active{color:inherit}.wk-nfhgyy .logo>p>a:hover{text-decoration:none}@media (min-width:768px){.wk-nfhgyy header{display:flex;justify-content:space-between;align-items:center}.wk-nfhgyy .logo>p{font-size:2.25rem;line-height:2.5rem}}@media (min-width:1280px){.wk-nfhgyy .logo>p{font-size:3rem;line-height:1}}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+:root {
+  /* Colors */
+  --color-base: 34, 40, 49;
+  --color-inverted: 232, 232, 232;
+  --color-primary: 253, 186, 116;
+  --color-primary-shadow: 19, 128, 134;
+  --color-secondary: 48, 71, 94;
+  --color-secondary-shadow: 74, 93, 117;
+  --color-secondary-inverted: 114, 138, 168;
+  --color-section: 245, 230, 202;
+  --color-section-inverted: 191, 179, 154;
+  --color-section-shadow: 165, 152, 124;
+  --color-accent: 245, 71, 72;
+
+  --opacity: 1;
+  
+  /* Tokens */
+  --text-base: rgba(var(--color-base), var(--opacity));
+  --text-primary: rgba(var(--color-primary), var(--opacity));
+  --text-secondary: rgba(var(--color-secondary), var(--opacity));
+  --text-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
+  --text-inverted: rgba(var(--color-inverted), var(--opacity));
+  --text-accent: rgba(var(--color-accent), var(--opacity));
+        
+  --bg-primary: rgba(var(--color-primary), var(--opacity));
+  --bg-secondary: rgba(var(--color-secondary), var(--opacity));
+  --bg-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
+  --bg-inverted: rgba(var(--color-inverted), var(--opacity));
+  --bg-section: rgba(var(--color-section), var(--opacity));
+  --bg-section-inverted: rgba(var(--color-section-inverted), var(--opacity));
+  --bg-accent: rgba(var(--color-accent), var(--opacity));
+
+  --primary-shadow: rgba(var(--color-primary-shadow), var(--opacity));
+  --section-shadow: rgba(var(--color-section-shadow), var(--opacity));
+
+  --fill-base: rgba(var(--color-base), var(--opacity));
+  --fill-primary: rgba(var(--color-primary), var(--opacity));
+  --fill-secondary: rgba(var(--color-secondary), var(--opacity));
+  --fill-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
+  --fill-inverted: rgba(var(--color-inverted), var(--opacity));
+  --fill-section: rgba(var(--color-section), var(--opacity));
+  --fill-accent: rgba(var(--color-accent), var(--opacity));
+  
+  --stroke-base: rgba(var(--color-base), var(--opacity));
+  --stroke-inverted: rgba(var(--color-inverted), var(--opacity));
+  --stroke-accent: rgba(var(--color-accent), var(--opacity));
+      
+  --decoration-secondary: rgba(var(--color-secondary), var(--opacity));
+  --decoration-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
+  --decoration-accent: rgba(var(--color-accent), var(--opacity));
+
+  --divide-base: rgba(var(--color-base), var(--opacity));
+
+  /* Radii */ 
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+
+  /* Breakpoint for reference only because they don't work in media queries */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Global styles */
+  color: var(--text-base);
+  scroll-behavior: smooth;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+  background-color: var(--bg-section);
+
+  font-family: "Helvetica Neue", Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img, svg, video, picture {
+  display: block;
+  max-width: 100%;
+}
+
+code, kbd, samp, pre {
+  font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  margin-block-end: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  color: var(--text-secondary);
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--decoration-secondary-inverted);
+  margin-block-end: 0.75rem;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+ul > li::marker {
+  color: var(--decoration-accent); 
+}
+
+a {
+  font-weight: 700;
+  color: var(--text-base);
+  transition: color 150ms ease-in-out;
+}
+
+footer {
+  margin-top: auto;
+  background-color: var(--bg-secondary);
+  padding-inline: 1rem;
+  padding-block-start: 2rem;
+  padding-block-end: 1rem;
+}
+
+footer > p {
+  color: var(--text-inverted);
+  max-width: var(--breakpoint-xl);
+  margin-inline: auto;
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media(min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-block-end: 2rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin-block-end: 1rem;
+  }
+}
+
+@media(prefers-color-scheme: dark) {
+
+}</style>
+		<script></script>
+  </head>
+  <body>
+    <site-header class="wk-nfhgyy"><header>
+  <div class="logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path>
+      <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z"></path>
+    </svg>
+    <p>
+      <a href="/">@hasanhaja</a>
+    </p>
+  </div>
+  <navbar class="wnc_wyukt"><nav>
+  <input type="checkbox" id="menu-toggle" role="button">
+  <label for="menu-toggle">
+    <span class="sr-only">Menu</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="hamburger-menu">
+      <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd"></path>
+    </svg>   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close-menu">
+      <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
+    </svg>
+  </label>
+  <ul id="primary-navigation">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="https://dev.to/hasanhaja" rel="me" target="_blank">
+        <span>Blog</span><span class="external-link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
+          </svg>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="/picks">Picks</a>
+    </li>
+    <li>
+      <a href="/gadgets">Gadgets</a>
+    </li>
+  </ul>
+</nav>
+
+
+</navbar>
+</header>
+
+
+</site-header>
+    <main><div>
+  <h1 class="sr-only">CV</h1>
+  <article>This is my CV page
+</article>
+</div>
+
+
+</main>
+    <footer>
+      <p>
+        Copyright &copy; 2023 Hasan Ali
+
+      </p>
+    </footer>
+  
+
+</body>
+</html>
