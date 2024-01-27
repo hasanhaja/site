@@ -22,7 +22,9 @@
     min-height: 100%;
     background-color: var(--bg-section);
 
+    /* TODO Is this what I want?  */
     font-family: "Helvetica Neue", Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.5rem;
   }
 
   svg, video, picture {
@@ -195,6 +197,15 @@
     --color-accent: 245, 71, 72;
 
     --opacity: 1;
+  }
+
+  /* TODO Replace with proper font face with font weights */
+  body {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Patua One', serif;
   }
 
   @media(prefers-color-scheme: dark) {

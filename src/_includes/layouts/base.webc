@@ -10,6 +10,10 @@
       content="I'm Hasan (@hasanhaja). I'm a software engineer and a web enthusiast."
     >
     <meta name="color-scheme" content="dark light">
+    <!-- TODO replace with hosted font files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Quicksand:wght@500&display=swap" rel="stylesheet" webc:keep>
     <link rel="stylesheet" href="base.css">
     <link href="https://fosstodon.org/@hasanhaja" rel="me">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
