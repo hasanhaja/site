@@ -36,6 +36,11 @@
 
   h2 > span {
     color: var(--text-accent);
+    text-shadow:
+      0.0125em 0.0125em 0 var(--text-primary),
+      0.025em 0.025em 0 var(--text-base),
+      0.0375em 0.0375em 0 var(--text-secondary),
+      0.05em 0.05em 0 var(--text-base);
   }
 
   p {
