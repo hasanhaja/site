@@ -29,20 +29,42 @@ layout: layouts/base.webc
     href="https://www.11ty.dev/"
   >🎈11ty</a> and Web Components.
 </p>
-<section>
-  <h2>Interests</h2>
-  <p>Something that I'm interested in...</p>
+<section class="content">
+  <h2>My Journey</h2>
+  <p>I learned HTML in the Dreamweaver days when I was about 12, but my dad taught it to me using a simple text editor and <kbd>Ctrl</kbd> + <kbd>R</kbd>. As a result, I always ended up tinkering with HTML and viewing source on ones that looked far beyond what I knew to build. I never got beyond <code>alert("Hello world!")</code> or even got to put my site on the internet, but it always felt like a place I could belong.</p>
+  <p>Years later in school, I learnt a bit of Python and went through a rebellious phase and didn't want to code like my dad. I ended up going to university for mechanical engineering and really enjoyed that. Because of nature of the course, I didn't get access to lathes, milling machines or welding stations outside of coursework, but I'm a tinkerer. I need to play and experiment with things to learn so I started to get bored. Since I had easy access to computers, I naturally gravitated towards learning to code.</p>
+  <p>I started with Java so I can get as much help from my dad as possible, but I kept trying to learn how to code on Arudinos so I can marry up my experience with both coding and mechanical engineering. I did end up doing this for a while and brought in more coding into my engineering coursework, but I eventually realized that I just really enjoy coding. I learned a lot about programming paradigms, different languages, and touched on databases. Eventually, I did my masters in Computer Vision and Machine Learning, where I learned a lot of Math, Python and C++.</p>
+  <p>In 2020, I started working as a software engineer doing fullstack Java development building web applications, which made it feel like I've come full circle in my programming journey. My tinkering became a lot more focused again, so I delved deeper and immersed myself in as much of the web development community as possible. And this was my introduction to React.</p>
 </section>
-
+<section class="content">
+  <h2>The Road Ahead</h2>
+  <p>I've been playing with all sorts of web technologies with a strong skew towards the frontend. My focus has been understanding technologies well enough so I can pick and suggest the right tool for the job. The kind of sites and apps I build most now are content heavy sites with interactivity, rather than a highly dynamic application with super deep sessions.</p>
+  <blockquote cite="https://youtu.be/ChfjZV-aA_Y?si=A5zPkShu3LRBYM24&t=2741">
+    <p>When digital is the default way that we make services, slowness is exclusionary.</p>
+    <footer>—Alex Russell, <cite><a href="https://youtu.be/ChfjZV-aA_Y?si=A5zPkShu3LRBYM24&t=2741" target="_blank">On the merits & limitations of React & single-page apps</a></cite></footer>
+  </blockquote>
+</section>
 
 <style webc:scoped>
   :host(.hero-body) {
     padding-inline: 1rem;
     padding-block-end: 1rem;
+
+    font-size: 1.125rem;
   }
 
   :host(.hero-body:last-of-type) {
-    margin-block-end: 1rem;
+    padding-block-end: unset;
+    margin-block-end: 3.25rem;
+  }
+
+  :host(.content) {
+    padding-inline: 1rem;
+    margin-block-end: 2rem;
+  }
+
+  :host(.content > p:not(:last-child)) {
+    padding-block-end: 1rem;
   }
 
   a:hover {
@@ -73,6 +95,11 @@ layout: layouts/base.webc
     :host(.hero-body) {
       margin-inline: auto;
       max-width: var(--breakpoint-lg);
+    }
+
+    :host(.content) {
+      margin-inline: auto;
+      max-width: var(--breakpoint-xl);
     }
   }
 </style>
