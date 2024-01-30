@@ -39,10 +39,16 @@
 
 <style webc:scoped>
   nav {
-    background-color: var(--bg-secondary);
+    --nav-bg-color: transparent;
+    background-color: var(--nav-bg-color);
     border-radius: var(--radius-md);
     
     color: var(--text-inverted);
+    
+    margin-inline: auto;
+    max-width: var(--breakpoint-xl);
+    /* TODO Calculate this based on svg and inset height */
+    min-height: 3.5rem;
   }
 
   li {
@@ -76,7 +82,13 @@
 
   ul {
     display: none;
-    margin-block-start: 1rem;
+  }
+
+  nav:has(#menu-toggle:checked) {
+    --nav-bg-color: var(--bg-secondary);
+    /* TODO Replace with calculated value */
+    margin-block-start: 4rem;
+    margin-inline: 1rem;
   }
 
   #menu-toggle:checked ~ ul {
@@ -115,12 +127,42 @@
     cursor: pointer;
   }
 
+  /* Reset default anchor styles */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Reset anchor styles for visited links */
+  a:visited {
+    color: inherit;
+  }
+
+  /* Reset anchor styles for links on hover */
+  a:hover, a:focus, a:focus-visible {
+    text-decoration: underline;
+  }
+
+  /* Reset anchor styles for active links */
+  a:active {
+    color: inherit;
+  }
+
   @media(min-width: 768px) {
     nav {
       background-color: transparent;
       border-radius: unset;
-      
       color: var(--text-base);
+      padding: 1rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav:has(#menu-toggle:checked) {
+      margin-block: unset;
+      margin-inline: auto;
     }
 
     #menu-toggle + label {

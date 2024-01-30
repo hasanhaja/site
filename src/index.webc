@@ -3,49 +3,46 @@ layout: layouts/base.webc
 ---
 <h1 class="sr-only">hasanhaja Home Page</h1>
 <hero></hero>
-<div>
-  <section>
-    <h2 class="section-heading">🤖 About me</h2>
-    <p class="section-content">
-      I'm a Software Engineer @
-      <a
-        data-accent-theme="cruk"
-        href="https://www.cancerresearchuk.org/"
-      >
-        Cancer Research UK
-      </a>, building
-      <a
-        data-accent-theme="nextjs"
-        href="https://nextjs.org/"
-      >
-        Next.js
-      </a>
-      apps. I love the web and I spend a lot of my time learning and playing with
-      web technologies. I'm a fan of
-      <a
-        data-accent-theme="solidjs"
-        href="https://www.solidjs.com/"
-      >Solid</a> and
-      <a
-        data-accent-theme="astro"
-        href="https://astro.build/"
-      >🚀Astro</a>, and I'm currently playing with
-      <a
-        data-accent-theme="11ty"
-        href="https://www.11ty.dev/"
-      >🎈11ty</a>.
-    </p>
-    <social-links></social-links>
-  </section>
-</div>
+<p class="hero-body">
+  I love the web and I enjoy building web experiences. I spend a lot of my time exploring web technologies and I aim to raise the general awareness of web developers with what the platform has to offer. 
+</p>
+<p class="hero-body">
+  In my day job, I'm building
+  <a
+    data-accent-theme="nextjs"
+    href="https://nextjs.org/"
+  >
+    Next.js
+  </a>
+  apps and spend a lot of time advocating for web standards and pushing to improve our performance. As a part of this effort, I've been researching
+  <a
+    data-accent-theme="solidjs"
+    href="https://www.solidjs.com/"
+  >Solid</a> as an alternative that has a low barrier of entry for React developers and
+  <a
+    data-accent-theme="astro"
+    href="https://astro.build/"
+  >🚀Astro</a> for people who want a fullstack, lightweight and HTML-first framework.
+  My current favorite technologies are
+  <a
+    data-accent-theme="11ty"
+    href="https://www.11ty.dev/"
+  >🎈11ty</a> and Web Components.
+</p>
+<section>
+  <h2>Interests</h2>
+  <p>Something that I'm interested in...</p>
+</section>
+
 
 <style webc:scoped>
-  section {
-    margin-inline: auto;
-    max-width: var(--breakpoint-xl);
-
-    margin-block-start: 4rem;
+  :host(.hero-body) {
     padding-inline: 1rem;
+    padding-block-end: 1rem;
+  }
+
+  :host(.hero-body:last-of-type) {
+    margin-block-end: 1rem;
   }
 
   a:hover {
@@ -72,27 +69,10 @@ layout: layouts/base.webc
     --link-hover-accent: #b81414; 
   }
 
-  .section-heading {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-
-    margin-block-end: 1rem;
-  }
-
-  .section-content {
-    padding-block-end: 0.75rem;
-  }
-
   @media(min-width: 768px) {
-    section {
-      padding-inline: 2.5rem;
-    }
-
-    .section-heading {
-      font-size: 3rem;
-      line-height: 1;
-      margin-block-end: 1.25rem;
+    :host(.hero-body) {
+      margin-inline: auto;
+      max-width: var(--breakpoint-lg);
     }
   }
 </style>
-

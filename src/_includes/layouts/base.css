@@ -154,6 +154,7 @@
     color: var(--text-inverted);
     max-width: var(--breakpoint-xl);
     margin-inline: auto;
+    margin-block-end: 1rem;
   }
 
   .sr-only {
@@ -197,6 +198,9 @@
     --color-accent: 245, 71, 72;
 
     --opacity: 1;
+
+    /* TODO Experimental styling*/
+    scrollbar-color: var(--fill-secondary) var(--bg-section);
   }
 
   /* TODO Replace with proper font face with font weights */
