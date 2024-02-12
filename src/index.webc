@@ -2,33 +2,36 @@
 layout: layouts/base.webc
 ---
 <h1 class="sr-only">hasanhaja Home Page</h1>
-<hero></hero>
+<site-hero></site-hero>
 <p class="hero-body">
   I love the web and I enjoy building web experiences. I spend a lot of my time exploring web technologies and I aim to raise the general awareness of web developers with what the platform has to offer. 
 </p>
-<p class="hero-body">
-  In my day job, I'm building
-  <a
-    data-accent-theme="nextjs"
-    href="https://nextjs.org/"
-  >
-    Next.js
-  </a>
-  apps and spend a lot of time advocating for web standards and pushing to improve our performance. As a part of this effort, I've been researching
-  <a
-    data-accent-theme="solidjs"
-    href="https://www.solidjs.com/"
-  >Solid</a> as an alternative that has a low barrier of entry for React developers and
-  <a
-    data-accent-theme="astro"
-    href="https://astro.build/"
-  >🚀Astro</a> for people who want a fullstack, lightweight and HTML-first framework.
-  My current favorite technologies are
-  <a
-    data-accent-theme="11ty"
-    href="https://www.11ty.dev/"
-  >🎈11ty</a> and Web Components.
-</p>
+<section class="content">
+  <h2>What I do</h2>
+  <p>
+    In my day job, I'm building
+    <a
+      data-accent-theme="nextjs"
+      href="https://nextjs.org/"
+    >
+      Next.js
+    </a>
+    apps and spend a lot of time advocating for web standards and pushing to improve our performance. As a part of this effort, I've been researching
+    <a
+      data-accent-theme="solidjs"
+      href="https://www.solidjs.com/"
+    >Solid</a> as an alternative that has a low barrier of entry for React developers and
+    <a
+      data-accent-theme="astro"
+      href="https://astro.build/"
+    >🚀Astro</a> for people who want a fullstack, lightweight and HTML-first framework.
+    My current favorite technologies are
+    <a
+      data-accent-theme="11ty"
+      href="https://www.11ty.dev/"
+    >🎈11ty</a> and Web Components.
+  </p>
+</section>
 <section class="content">
   <h2>My Journey</h2>
   <p>I learned HTML in the Dreamweaver days when I was about 12, but my dad taught it to me using a simple text editor and <kbd>Ctrl</kbd> + <kbd>R</kbd>. As a result, I always ended up tinkering with HTML and viewing source on ones that looked far beyond what I knew to build. I never got beyond <code>alert("Hello world!")</code> or even got to put my site on the internet, but it always felt like a place I could belong.</p>
@@ -50,7 +53,7 @@ layout: layouts/base.webc
     padding-inline: 1rem;
     padding-block-end: 1rem;
 
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 
   :host(.hero-body:last-of-type) {

@@ -1,0 +1,23 @@
+<footer>
+  <p>
+    <copyright></copyright>
+  </p>
+  <social-links></social-links>
+</footer>
+
+<style webc:scoped>
+  footer {
+    margin-top: auto;
+    background-color: var(--bg-secondary);
+    padding-inline: 1rem;
+    padding-block-start: 2rem;
+    padding-block-end: 1rem;
+  }
+
+  footer > p {
+    color: var(--text-inverted);
+    max-width: var(--breakpoint-xl);
+    margin-inline: auto;
+    margin-block-end: 1rem;
+  }
+</style>

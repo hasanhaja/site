@@ -27,11 +27,6 @@
   <body>
     <site-header></site-header>
     <main @html="this.content"></main>
-    <footer>
-      <p>
-        <copyright></copyright>
-      </p>
-      <social-links></social-links>
-    </footer>
+    <site-footer></site-footer>
   </body>
 </html>

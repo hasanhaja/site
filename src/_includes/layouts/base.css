@@ -122,6 +122,11 @@
     margin-block-end: 0.75rem;
   }
 
+  p {
+    /* This default looked better for the font I picked */
+    font-size: 1.125rem;
+  }
+
   ol {
     list-style-type: decimal;
     list-style-position: inside;
@@ -140,21 +145,6 @@
     font-weight: 700;
     color: var(--text-base);
     transition: color 150ms ease-in-out;
-  }
-
-  footer {
-    margin-top: auto;
-    background-color: var(--bg-secondary);
-    padding-inline: 1rem;
-    padding-block-start: 2rem;
-    padding-block-end: 1rem;
-  }
-
-  footer > p {
-    color: var(--text-inverted);
-    max-width: var(--breakpoint-xl);
-    margin-inline: auto;
-    margin-block-end: 1rem;
   }
 
   .sr-only {
