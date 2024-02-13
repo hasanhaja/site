@@ -1,41 +1,25 @@
 <div class="icons">
   <a href="https://fosstodon.org/@hasanhaja" rel="me" target="_blank">
-    <img
-      class="blend-multiply"
-      src="/assets/mastodon.png"
-      alt="Blue Mastodon logo"
-    />
+    <i class="blend-multiply fa-brands fa-mastodon"></i>
     <span class="sr-only">fosstodon.org/@hasanhaja</span>
   </a>
   <a href="https://github.com/hasanhaja" rel="me" target="_blank">
-    <img
-      class="reduce-opacity"
-      src="/assets/github.png"
-      alt="Black GitHub logo"
-    />
+    <i class="blend-multiply fa-brands fa-github"></i>
     <span class="sr-only">github.com/hasanhaja</span>
   </a>
   <a href="https://www.linkedin.com/in/hasanhaja/" rel="me" target="_blank">
-    <img
-      class="blend-multiply"
-      src="/assets/linkedin.png"
-      alt="Blue LinkedIn logo"
-    />
+    <i class="blend-multiply fa-brands fa-linkedin"></i>
     <span class="sr-only">www.linkedin.com/in/hasanhaja/</span>
   </a>
 </div>
 
 <style webc:scoped>
-  img {
-    width: 1.625rem;
+  i {
+    font-size: 1.625rem;
   }
 
   .blend-multiply:hover {
     mix-blend-mode: multiply;
-  }
-
-  .reduce-opacity:hover {
-    opacity: 0.4; 
   }
 
   .icons {
@@ -49,8 +33,8 @@
       gap: 1rem;
     }
 
-    img {
-      width: 2rem;
+    i {
+      font-size: 2rem;
     }
   }
 </style>
