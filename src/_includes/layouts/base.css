@@ -20,10 +20,8 @@
     flex-direction: column;
 
     min-height: 100%;
-    background-color: var(--bg-section);
+    background-color: var(--bg-base);
 
-    /* TODO Is this what I want?  */
-    font-family: "Helvetica Neue", Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 1.5rem;
   }
 
@@ -58,13 +56,18 @@
     --text-inverted: rgba(var(--color-inverted), var(--opacity));
     --text-accent: rgba(var(--color-accent), var(--opacity));
           
-    --bg-primary: rgba(var(--color-primary), var(--opacity));
+    /* NEW */
+    --bg-base: white;
     --bg-secondary: rgba(var(--color-secondary), var(--opacity));
-    --bg-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
-    --bg-inverted: rgba(var(--color-inverted), var(--opacity));
     --bg-section: rgba(var(--color-section), var(--opacity));
-    --bg-section-inverted: rgba(var(--color-section-inverted), var(--opacity));
-    --bg-accent: rgba(var(--color-accent), var(--opacity));
+    /* OLD */
+    /* --bg-primary: rgba(var(--color-primary), var(--opacity)); */
+    /* --bg-secondary: rgba(var(--color-secondary), var(--opacity)); */
+    /* --bg-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity)); */
+    /* --bg-inverted: rgba(var(--color-inverted), var(--opacity)); */
+    /* --bg-section: rgba(var(--color-section), var(--opacity)); */
+    /* --bg-section-inverted: rgba(var(--color-section-inverted), var(--opacity)); */
+    /* --bg-accent: rgba(var(--color-accent), var(--opacity)); */
 
     --primary-shadow: rgba(var(--color-primary-shadow), var(--opacity));
     --section-shadow: rgba(var(--color-section-shadow), var(--opacity));
@@ -103,6 +106,18 @@
     scroll-behavior: smooth;
   }
 
+  body {
+    font-family: var(--font-text, sans-serif);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading, sans-serif);
+  }
+
+  h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    max-width: 60ch; 
+  }
+
   h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -116,9 +131,6 @@
 
     color: var(--text-secondary);
     font-weight: 700;
-    text-decoration-line: underline;
-    text-decoration-thickness: 4px;
-    text-decoration-color: var(--decoration-secondary-inverted);
     margin-block-end: 0.75rem;
   }
 
@@ -189,20 +201,17 @@
 
     --opacity: 1;
 
-    /* TODO Experimental styling*/
-    scrollbar-color: var(--fill-secondary) var(--bg-section);
+    --font-heading: "Lilita One", sans-serif;
+    --font-text: 'Quicksand', sans-serif;
   }
 
-  /* TODO Replace with proper font face with font weights */
-  body {
-    font-family: 'Quicksand', sans-serif;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Patua One', serif;
+  blockquote::before {
+    content: open-quote;
   }
 
   @media(prefers-color-scheme: dark) {
-
+    /* body { */
+    /*   --bg-base: black; */
+    /* } */
   }
 }

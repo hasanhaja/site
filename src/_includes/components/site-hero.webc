@@ -1,6 +1,6 @@
 <header>
   <h2>
-    Hi, I'm <span>Hasan</span> 👋🏾
+    Hi, I'm <span>Hasan</span>
   </h2>
   <p>
     I'm a Software Engineer @
@@ -13,8 +13,17 @@
 
 <style webc:scoped>
   header {
+    margin-block-start: 15vh;
+    margin-inline: auto;
+    max-width: fit-content;
+
     padding-inline: 1rem;
     padding-block: 2rem;
+    min-height: 80vh;
+    min-height: 80svh;
+    
+    display: flex;
+    flex-direction: column;
   }
   
   a:hover {
@@ -26,33 +35,49 @@
   }
 
   h2 {
-    font-size: 4.5rem;
-    line-height: 1;
-
     color: var(--text-base);
-    text-decoration: none;
-    margin-block-end: 1.25rem;
+
+    font-size: 7rem;
+    line-height: 0.9;
+    letter-spacing: -0.15rem;
+    margin-block-end: 1.5rem;
+    max-width: 5ch;
   }
 
   h2 > span {
     color: var(--text-accent);
-    text-shadow:
-      0.0125em 0.0125em 0 var(--text-primary),
-      0.025em 0.025em 0 var(--text-base),
-      0.0375em 0.0375em 0 var(--text-secondary),
-      0.05em 0.05em 0 var(--text-base);
   }
 
   p {
-    font-size: 2.25rem;
-    line-height: 2.625rem;
-    font-family: 'Patua One', serif;
+    font-size: 2.125rem;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.15rem;
+    max-width: 17ch;
+  }
+
+  /* TODO Consider in-between size for tablet */
+
+  @media(min-width: 640px) {
+    h2 {
+      font-size: 10rem;
+    }
+
+    p {
+      font-size: 2.25rem;
+      max-width: 18ch;
+    }
   }
 
   @media(min-width: 768px) {
-    header {
-      margin-inline: auto;
-      max-width: var(--breakpoint-lg);
+    
+    h2 {
+      font-size: 12rem;
+      margin-block-end: 2rem;
+    }
+
+    p {
+      font-size: 3.25rem;
     }
   }
 </style>

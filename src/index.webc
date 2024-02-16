@@ -127,12 +127,10 @@ layout: layouts/base.webc
   @media(min-width: 768px) {
     :host(.hero-body) {
       margin-inline: auto;
-      max-width: var(--breakpoint-lg);
     }
 
     :host(.content) {
       margin-inline: auto;
-      max-width: var(--breakpoint-xl);
     }
   }
 </style>
