@@ -14,9 +14,9 @@
       <a href="/">Home</a>
     </li>
     <li>
-      <a href="https://dev.to/hasanhaja" rel="me" target="_blank">
+      <a href="https://dev.to/hasanhaja" rel="me" target="_blank" class="external-link">
         <span>Blog</span>
-        <i class="external-link fa-solid fa-arrow-up-right-from-square"></i>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
       </a>
     </li>
     <li>
@@ -42,6 +42,10 @@
     min-height: 3.5rem;
   }
 
+  ul, li, ol {
+    max-width: unset;
+  }
+
   li {
     list-style: none;
     display: flex;
@@ -60,8 +64,14 @@
   li > a:hover, li > a:focus, li > a:focus-visible {
     text-decoration-line: underline;
   }
-
+  
   .external-link {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .external-link > i {
     font-size: 1.25rem;
   }
 
