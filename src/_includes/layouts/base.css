@@ -114,7 +114,7 @@
     font-family: var(--font-heading, sans-serif);
   }
 
-  h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote > footer {
     max-width: 60ch; 
   }
 
@@ -134,7 +134,7 @@
     margin-block-end: 0.75rem;
   }
 
-  ul, ol, li, p {
+  ul, ol, li, p, blockquote > footer {
     /* This default looked better for the font I picked */
     font-size: 1.125rem;
   }
@@ -205,8 +205,20 @@
     --font-text: 'Quicksand', sans-serif;
   }
 
-  blockquote::before {
+  blockquote > p::before {
     content: open-quote;
+  }
+
+  blockquote > p::after {
+    content: close-quote;
+  }
+
+  blockquote > p {
+    --_quote-border-thickness: 0.25rem;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    border-left: var(--_quote-border-thickness) solid var(--text-base);
+    border-radius: var(--_quote-border-thickness) 0 0 var(--_quote-border-thickness);
   }
 
   @media(prefers-color-scheme: dark) {
