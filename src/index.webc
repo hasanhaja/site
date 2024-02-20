@@ -3,70 +3,32 @@ layout: layouts/base.webc
 ---
 <h1 class="sr-only">hasanhaja Home Page</h1>
 <site-hero></site-hero>
-<p class="hero-body">
-  I love the web and I enjoy building web experiences. I spend a lot of my time exploring web technologies and I aim to raise the general awareness of web developers with what the platform has to offer. 
-</p>
 <section class="content">
-  <h2>What I do</h2>
-  <p>
-    In my day job, I'm building
-    <a
-      data-accent-theme="nextjs"
-      href="https://nextjs.org/"
-    >
-      Next.js
-    </a>
-    apps and spend a lot of time advocating for web standards and pushing to improve our performance. As a part of this effort, I've been researching
-    <a
-      data-accent-theme="solidjs"
-      href="https://www.solidjs.com/"
-    >Solid</a> as an alternative that has a low barrier of entry for React developers and
-    <a
-      data-accent-theme="astro"
-      href="https://astro.build/"
-    >🚀Astro</a> for people who want a fullstack, lightweight and HTML-first framework.
-    My current favorite technologies are
-    <a
-      data-accent-theme="11ty"
-      href="https://www.11ty.dev/"
-    >🎈11ty</a> and Web Components.
-  </p>
-</section>
-<section class="content">
-  <h2>How I got here</h2>
-  <p>I learned HTML in the Dreamweaver days when I was about 12, but my dad taught it to me using a simple text editor and <kbd>Ctrl</kbd> + <kbd>R</kbd>. As a result, I always ended up tinkering with HTML and viewing source on ones that looked far beyond what I knew to build. I never got beyond <code>alert("Hello world!")</code> or even got to put my site on the internet, but it always felt like a place I could belong.</p>
-  <p>Years later in school, I learnt a bit of Python and went through a rebellious phase and didn't want to code like my dad. I ended up going to university for mechanical engineering and really enjoyed that. Because of nature of the course, I didn't get access to lathes, milling machines or welding stations outside of coursework, but I'm a tinkerer. I need to play and experiment with things to learn so I started to get bored. Since I had easy access to computers, I naturally gravitated towards learning to code.</p>
-  <p>I started with Java so I can get as much help from my dad as possible, but I kept trying to learn how to code on Arudinos so I can marry up my experience with both coding and mechanical engineering. I did end up doing this for a while and brought in more coding into my engineering coursework, but I eventually realized that I just really enjoy coding. I learned a lot about programming paradigms, different languages, and touched on databases. Eventually, I did my masters in Computer Vision and Machine Learning, where I learned a lot of Math, Python and C++.</p>
-  <p>In 2020, I started working as a software engineer doing fullstack Java development building web applications, which made it feel like I've come full circle in my programming journey. My tinkering became a lot more focused again, so I delved deeper and immersed myself in as much of the web development community as possible. And this was my introduction to React.</p>
-</section>
-<section class="content">
-  <h2>The Road Ahead</h2>
-  <p>I've been playing with all sorts of web technologies with a strong skew towards the frontend. My focus has been understanding technologies well enough so I can pick and suggest the right tool for the job. The kind of sites and apps I build most now are content heavy sites with interactivity, rather than a highly dynamic application with super deep sessions.</p>
+  <h2>My mission</h2>
+  <p>I want to raise the baseline standard in education material for building web experiences. <a href="/about">When I started in web development</a>, I had a rough understanding of how the platform worked and a cursory awareness of all it has to offer. However, I've spent the last two years going back to basics and I've learnt that the platform is so incredibly capable and the need for abstractions like React is more of a niché than requirement. I believe that understanding the platform well enables you to create better experiences, and it also gives you the tools to evaluate the complexity you choose to take on in a more meaningful way. I plan on achieving this in my blog series <a href="https://dev.to/hasanhaja/series/23718" target="_blank">"Web Fundamentals"</a>.</p>
   <blockquote cite="https://youtu.be/ChfjZV-aA_Y?si=A5zPkShu3LRBYM24&t=2741">
     <p>When digital is the default way that we make services, slowness is exclusionary.</p>
     <footer>—Alex Russell, <cite><a href="https://youtu.be/ChfjZV-aA_Y?si=A5zPkShu3LRBYM24&t=2741" target="_blank">On the merits & limitations of React & single-page apps</a></cite></footer>
   </blockquote>
 </section>
+<section class="content">
+  <h2>My interests</h2>
+  <p>I've been playing with all sorts of web technologies with a strong skew towards the frontend. My focus has been understanding technologies well enough so I can pick and suggest the right tool for the job. The kind of sites and apps I build most now are content heavy sites with interactivity, rather than a highly dynamic application with super deep sessions.</p>
+</section>
 
 <style webc:scoped>
-  :host(.hero-body) {
-    padding-inline: 1rem;
-    padding-block-end: 1rem;
-
-    font-size: 1.25rem;
-  }
-
-  :host(.hero-body:last-of-type) {
-    padding-block-end: unset;
-    margin-block-end: 3.25rem;
-  }
-
   :host(.content) {
     padding-inline: 1rem;
     margin-block-end: 2rem;
+    margin-inline: auto;
+    max-width: var(--breakpoint-md);
 
     position: relative;
     isolation: isolate;
+  }
+  
+  :host(.content:not(:last-child)) {
+    margin-block-end: 4.5rem;
   }
 
   :host(.content > p:not(:last-child)) {
@@ -93,11 +55,7 @@ layout: layouts/base.webc
   }
 
   :host(.content:nth-of-type(2) > h2::before) {
-    content: "\f251";
-  }
-
-  :host(.content:nth-of-type(3) > h2::before) {
-    content: "\f135";
+    content: "\f004";
   }
 
   a:hover {
@@ -125,12 +83,8 @@ layout: layouts/base.webc
   }
 
   @media(min-width: 768px) {
-    :host(.hero-body) {
-      margin-inline: auto;
-    }
-
-    :host(.content) {
-      margin-inline: auto;
+    :host(.content:not(:last-child)) {
+      margin-block-end: 5.5rem;
     }
   }
 </style>
