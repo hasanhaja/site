@@ -161,7 +161,8 @@
   :root {
     /* Colors */
     /* Picked with the help of https://oklch.com */
-    --clr-primary-100: oklch(94.11% 0.04 66.29); 
+    --clr-primary-100: oklch(97% 0.013 66.29); 
+    --clr-primary-200: oklch(94.11% 0.04 66.29); 
     --clr-primary-300: oklch(88.67% 0.08 66.29); 
     --clr-primary-500: oklch(83.52% 0.1213 66.29); 
     --clr-secondary-500: oklch(52.36% 0.089 200.9); 
