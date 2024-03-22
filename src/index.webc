@@ -2,50 +2,60 @@
 layout: layouts/base.webc
 ---
 <h1 class="sr-only">hasanhaja Home Page</h1>
-<hero></hero>
-<div>
-  <section>
-    <h2 class="section-heading">🤖 About me</h2>
-    <p class="section-content">
-      I'm a Software Engineer @
-      <a
-        data-accent-theme="cruk"
-        href="https://www.cancerresearchuk.org/"
-      >
-        Cancer Research UK
-      </a>, building
-      <a
-        data-accent-theme="nextjs"
-        href="https://nextjs.org/"
-      >
-        Next.js
-      </a>
-      apps. I love the web and I spend a lot of my time learning and playing with
-      web technologies. I'm a fan of
-      <a
-        data-accent-theme="solidjs"
-        href="https://www.solidjs.com/"
-      >Solid</a> and
-      <a
-        data-accent-theme="astro"
-        href="https://astro.build/"
-      >🚀Astro</a>, and I'm currently playing with
-      <a
-        data-accent-theme="11ty"
-        href="https://www.11ty.dev/"
-      >🎈11ty</a>.
-    </p>
-    <social-links></social-links>
-  </section>
-</div>
+<site-hero></site-hero>
+<section class="content">
+  <h2>My mission</h2>
+  <p>I want to raise the baseline standard in education material for building web experiences. <a href="/about">When I started in web development</a>, I had a rough understanding of how the platform worked and a cursory awareness of all it has to offer. However, I've spent the last two years going back to basics and I've learnt that the platform is so incredibly capable and the need for abstractions like React is more of a niché than requirement. I believe that understanding the platform well enables you to create better experiences, and it also gives you the tools to evaluate the complexity you choose to take on in a more meaningful way. I plan on achieving this in my blog series <a href="https://dev.to/hasanhaja/series/23718" target="_blank">"Web Fundamentals"</a>.</p>
+  <blockquote cite="https://youtu.be/ChfjZV-aA_Y?si=A5zPkShu3LRBYM24&t=2741">
+    <p>When digital is the default way that we make services, slowness is exclusionary.</p>
+    <footer>—Alex Russell, <cite><a href="https://youtu.be/ChfjZV-aA_Y?si=A5zPkShu3LRBYM24&t=2741" target="_blank">On the merits & limitations of React & single-page apps</a></cite></footer>
+  </blockquote>
+</section>
+<section class="content">
+  <h2>My interests</h2>
+  <p>I've been playing with all sorts of web technologies with a strong skew towards the frontend. My focus has been understanding technologies well enough so I can pick and suggest the right tool for the job. The kind of sites and apps I build most now are content heavy sites with interactivity, rather than a highly dynamic application with super deep sessions.</p>
+</section>
 
 <style webc:scoped>
-  section {
-    margin-inline: auto;
-    max-width: var(--breakpoint-xl);
-
-    margin-block-start: 4rem;
+  :host(.content) {
     padding-inline: 1rem;
+    margin-block-end: 2rem;
+    margin-inline: auto;
+    max-width: var(--breakpoint-md);
+
+    position: relative;
+    isolation: isolate;
+  }
+  
+  :host(.content:not(:last-child)) {
+    margin-block-end: 4.5rem;
+  }
+
+  :host(.content > p:not(:last-child)) {
+    padding-block-end: 1rem;
+  }
+  
+  :host(.content > h2::before) {
+    font-family: "Font Awesome 6 Free";
+
+    /* Copied from https://origin.fontawesome.com/docs/web/add-icons/pseudo-elements#_1-define-common-css-for-duotone-icons */
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+
+    position: absolute;
+    left: 0.5rem;
+    font-size: 3rem;
+    color: var(--fill-primary);
+    z-index: -1;
+  }
+
+  :host(.content:nth-of-type(1) > h2::before) {
+    content: "\f4d8";
+  }
+
+  :host(.content:nth-of-type(2) > h2::before) {
+    content: "\f004";
   }
 
   a:hover {
@@ -72,27 +82,9 @@ layout: layouts/base.webc
     --link-hover-accent: #b81414; 
   }
 
-  .section-heading {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-
-    margin-block-end: 1rem;
-  }
-
-  .section-content {
-    padding-block-end: 0.75rem;
-  }
-
   @media(min-width: 768px) {
-    section {
-      padding-inline: 2.5rem;
-    }
-
-    .section-heading {
-      font-size: 3rem;
-      line-height: 1;
-      margin-block-end: 1.25rem;
+    :host(.content:not(:last-child)) {
+      margin-block-end: 5.5rem;
     }
   }
 </style>
-
