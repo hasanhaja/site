@@ -1,5 +1,5 @@
 <script webc:type="js">
   const now = new Date();
 
-  `Copyright &copy; ${now.getFullYear()} Hasan Ali`
+  `&copy; ${now.getFullYear()} Hasan Ali`
 </script>

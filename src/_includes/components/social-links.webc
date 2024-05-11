@@ -1,87 +1,40 @@
-<div class="social-container">
-  <p>Social</p>
-  <div class="icons">
-    <a href="https://fosstodon.org/@hasanhaja" rel="me" target="_blank">
-      <img
-        class="blend-multiply"
-        src="/assets/mastodon.png"
-        alt="Blue Mastodon logo"
-      />
-      <span class="sr-only">fosstodon.org/@hasanhaja</span>
-    </a>
-    <a href="https://github.com/hasanhaja" rel="me" target="_blank">
-      <img
-        class="reduce-opacity"
-        src="/assets/github.png"
-        alt="Black GitHub logo"
-      />
-      <span class="sr-only">github.com/hasanhaja</span>
-    </a>
-    <a href="https://www.linkedin.com/in/hasanhaja/" rel="me" target="_blank">
-      <img
-        class="blend-multiply"
-        src="/assets/linkedin.png"
-        alt="Blue LinkedIn logo"
-      />
-      <span class="sr-only">www.linkedin.com/in/hasanhaja/</span>
-    </a>
-  </div>
+<div class="icons">
+  <a href="https://fosstodon.org/@hasanhaja" rel="me" target="_blank">
+    <i class="blend-multiply fa-brands fa-mastodon"></i>
+    <span class="sr-only">fosstodon.org/@hasanhaja</span>
+  </a>
+  <a href="https://github.com/hasanhaja" rel="me" target="_blank">
+    <i class="blend-multiply fa-brands fa-github"></i>
+    <span class="sr-only">github.com/hasanhaja</span>
+  </a>
+  <a href="https://www.linkedin.com/in/hasanhaja/" rel="me" target="_blank">
+    <i class="blend-multiply fa-brands fa-linkedin"></i>
+    <span class="sr-only">www.linkedin.com/in/hasanhaja/</span>
+  </a>
 </div>
 
 <style webc:scoped>
-  .social-container {
-    background-color: var(--bg-secondary);
-    border-radius: var(--radius-md);
-
-    margin-block: 0.5rem;
-    max-width: 32rem;
-    margin-inline: auto;
-
-    display: flex;
-  }
-
-  :host p {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-
-    font-weight: 700;
-    color: var(--text-inverted);
-    padding: 1.25rem;
-  }
-
-  img {
-    width: 3.5rem;
+  i {
+    font-size: 1.625rem;
   }
 
   .blend-multiply:hover {
     mix-blend-mode: multiply;
   }
 
-  .reduce-opacity:hover {
-    opacity: 0.4; 
-  }
-
   .icons {
-    background-color: var(--bg-inverted);
     display: flex;
-    gap: 0.5rem;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding-inline: 8%;
+    gap: 1.5rem;
+    justify-content: center;
   }
 
   @media(min-width: 640px) {
-    :host p {
-      padding: 1.75rem;
-      font-size: 2.25rem;
-      line-height: 2.5rem;
+    .icons {
+      gap: 1rem;
     }
 
-    .icons {
-      padding-inline: unset;
-      gap: 2.5rem;
-      justify-content: center;
+    i {
+      font-size: 2rem;
     }
   }
 </style>

@@ -10,7 +10,14 @@
       content="I'm Hasan (@hasanhaja). I'm a software engineer and a web enthusiast."
     >
     <meta name="color-scheme" content="dark light">
+    <!-- TODO replace with hosted font files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" webc:keep>
     <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="/css/solid.min.css" webc:keep>
+    <link rel="stylesheet" href="/css/fontawesome.min.css" webc:keep>
+    <link rel="stylesheet" href="/css/brands.min.css" webc:keep>
     <link href="https://fosstodon.org/@hasanhaja" rel="me">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -23,10 +30,6 @@
   <body>
     <site-header></site-header>
     <main @html="this.content"></main>
-    <footer>
-      <p>
-        <copyright></copyright>
-      </p>
-    </footer>
+    <site-footer></site-footer>
   </body>
 </html>

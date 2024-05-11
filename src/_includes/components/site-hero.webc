@@ -1,0 +1,116 @@
+<header>
+  <div>
+    <h2>
+      Hi, I'm <span>Hasan</span>
+    </h2>
+    <p>
+      I'm a Software Engineer @
+      <a
+        data-accent-theme="cruk"
+        href="https://www.cancerresearchuk.org/"
+      >Cancer Research UK</a>
+    </p>
+  </div>
+</header>
+
+<style webc:scoped>
+  header {
+    padding-block-start: 20vh;
+    padding-block-start: 20svh;
+    --s: 160px; 
+    --c1: var(--clr-primary-100);
+    --c2: var(--bg-base);
+    
+    --_g: var(--s) var(--s) 
+      radial-gradient(var(--c1) 17%,var(--c2) 18% 35%,#0000 36.5%);
+    --_fade: linear-gradient(var(--bg-base) 30vh, transparent); 
+
+    background: 
+      var(--_fade),
+      calc(var(--s)/-4) calc(var(--s)/-4)/var(--_g),
+      calc(var(--s)/ 4) calc(var(--s)/ 4)/var(--_g),
+      radial-gradient(var(--c2) 34%,var(--c1) 36% 68%,#0000 70%) 
+       0 0/calc(var(--s)/2) calc(var(--s)/2),
+      repeating-linear-gradient(45deg,var(--c1) -12.5% 12.5%,var(--c2) 0 37.5%)
+       0 0/var(--s) var(--s);
+
+    margin-block-end: 10vh;
+    margin-block-end: 10svh;
+  }
+  
+  div {
+    margin-inline: auto;
+    max-width: fit-content;
+
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    min-height: 75vh;
+    min-height: 75svh;
+    
+    display: flex;
+    flex-direction: column;
+  }
+
+  a:hover {
+    color: var(--link-hover-accent);
+  }
+  
+  a[data-accent-theme="cruk"] {
+    --link-hover-accent: #e40085; 
+  }
+
+  h2 {
+    color: var(--text-base);
+
+    font-size: 7rem;
+    line-height: 0.9;
+    letter-spacing: -0.15rem;
+    margin-block-end: 1.5rem;
+    max-width: 5ch;
+  }
+
+  h2 > span {
+    color: var(--text-accent);
+  }
+
+  p {
+    font-size: 2.125rem;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.15rem;
+    max-width: 17ch;
+  }
+
+  @media(min-width: 640px) {
+    header {
+      padding-block-start: 15vh;
+      padding-block-start: 15svh;
+    }
+    
+    div {
+      min-height: 80vh;
+      min-height: 80svh;
+    }
+
+    h2 {
+      font-size: 10rem;
+    }
+
+    p {
+      font-size: 2.25rem;
+      max-width: 18ch;
+    }
+  }
+
+  @media(min-width: 768px) {
+    
+    h2 {
+      font-size: 12rem;
+      margin-block-end: 2rem;
+    }
+
+    p {
+      font-size: 3.25rem;
+    }
+  }
+</style>

@@ -20,9 +20,10 @@
     flex-direction: column;
 
     min-height: 100%;
-    background-color: var(--bg-section);
+    /* TODO Set a default value */
+    background-color: var(--bg-base);
 
-    font-family: "Helvetica Neue", Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.5rem;
   }
 
   svg, video, picture {
@@ -49,42 +50,21 @@
 @layer base {
   :root {
     /* Tokens */
-    --text-base: rgba(var(--color-base), var(--opacity));
-    --text-primary: rgba(var(--color-primary), var(--opacity));
-    --text-secondary: rgba(var(--color-secondary), var(--opacity));
-    --text-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
-    --text-inverted: rgba(var(--color-inverted), var(--opacity));
-    --text-accent: rgba(var(--color-accent), var(--opacity));
+    --text-base: var(--clr-base-800);
+    --text-inverted: var(--clr-inverted-100);
+    --text-accent: var(--clr-accent-500);
           
-    --bg-primary: rgba(var(--color-primary), var(--opacity));
-    --bg-secondary: rgba(var(--color-secondary), var(--opacity));
-    --bg-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
-    --bg-inverted: rgba(var(--color-inverted), var(--opacity));
-    --bg-section: rgba(var(--color-section), var(--opacity));
-    --bg-section-inverted: rgba(var(--color-section-inverted), var(--opacity));
-    --bg-accent: rgba(var(--color-accent), var(--opacity));
+    --bg-base: var(--clr-inverted-100);
+    --bg-secondary: var(--clr-secondary-500);
+    --bg-primary: var(--clr-primary-500);
 
-    --primary-shadow: rgba(var(--color-primary-shadow), var(--opacity));
-    --section-shadow: rgba(var(--color-section-shadow), var(--opacity));
+    --divide-base: var(--clr-base-800);
+    --stroke-base: var(--clr-base-800);
+    --fill-base: var(--clr-base-800);
+    --fill-primary: var(--clr-primary-500);
 
-    --fill-base: rgba(var(--color-base), var(--opacity));
-    --fill-primary: rgba(var(--color-primary), var(--opacity));
-    --fill-secondary: rgba(var(--color-secondary), var(--opacity));
-    --fill-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
-    --fill-inverted: rgba(var(--color-inverted), var(--opacity));
-    --fill-section: rgba(var(--color-section), var(--opacity));
-    --fill-accent: rgba(var(--color-accent), var(--opacity));
+    --primary-shadow: var(--clr-secondary-500);
     
-    --stroke-base: rgba(var(--color-base), var(--opacity));
-    --stroke-inverted: rgba(var(--color-inverted), var(--opacity));
-    --stroke-accent: rgba(var(--color-accent), var(--opacity));
-        
-    --decoration-secondary: rgba(var(--color-secondary), var(--opacity));
-    --decoration-secondary-inverted: rgba(var(--color-secondary-inverted), var(--opacity));
-    --decoration-accent: rgba(var(--color-accent), var(--opacity));
-
-    --divide-base: rgba(var(--color-base), var(--opacity));
-
     /* Radii */ 
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
@@ -101,6 +81,18 @@
     scroll-behavior: smooth;
   }
 
+  body {
+    font-family: var(--font-text, sans-serif);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading, sans-serif);
+  }
+
+  h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote > footer {
+    max-width: 60ch; 
+  }
+
   h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -112,12 +104,13 @@
     font-size: 1.5rem;
     line-height: 2rem;
 
-    color: var(--text-secondary);
     font-weight: 700;
-    text-decoration-line: underline;
-    text-decoration-thickness: 4px;
-    text-decoration-color: var(--decoration-secondary-inverted);
     margin-block-end: 0.75rem;
+  }
+
+  ul, ol, li, p, blockquote > footer {
+    /* This default looked better for the font I picked */
+    font-size: 1.125rem;
   }
 
   ol {
@@ -131,27 +124,13 @@
   }
 
   ul > li::marker {
-    color: var(--decoration-accent); 
+    color: var(--clr-accent-500); 
   }
 
   a {
     font-weight: 700;
     color: var(--text-base);
     transition: color 150ms ease-in-out;
-  }
-
-  footer {
-    margin-top: auto;
-    background-color: var(--bg-secondary);
-    padding-inline: 1rem;
-    padding-block-start: 2rem;
-    padding-block-end: 1rem;
-  }
-
-  footer > p {
-    color: var(--text-inverted);
-    max-width: var(--breakpoint-xl);
-    margin-inline: auto;
   }
 
   .sr-only {
@@ -182,22 +161,45 @@
 @layer theme {
   :root {
     /* Colors */
-    --color-base: 34, 40, 49;
-    --color-inverted: 232, 232, 232;
-    --color-primary: 253, 186, 116;
-    --color-primary-shadow: 19, 128, 134;
-    --color-secondary: 48, 71, 94;
-    --color-secondary-shadow: 74, 93, 117;
-    --color-secondary-inverted: 114, 138, 168;
-    --color-section: 245, 230, 202;
-    --color-section-inverted: 191, 179, 154;
-    --color-section-shadow: 165, 152, 124;
-    --color-accent: 245, 71, 72;
+    /* Picked with the help of https://oklch.com */
+    --clr-primary-100: oklch(97% 0.013 66.29); 
+    --clr-primary-200: oklch(94.11% 0.04 66.29); 
+    --clr-primary-300: oklch(88.67% 0.08 66.29); 
+    --clr-primary-500: oklch(83.52% 0.1213 66.29); 
+    --clr-secondary-500: oklch(52.36% 0.089 200.9); 
+    --clr-accent-500: oklch(65.02% 0.211 24.96); 
+    --clr-base-800: oklch(27.49% 0.019 258.37);
+    --clr-base-500: oklch(35.49% 0.019 258.37);
+    --clr-inverted-100: oklch(98% 0 0);
 
-    --opacity: 1;
+    --font-heading: "Lilita One", sans-serif;
+    --font-text: 'Quicksand', sans-serif;
+  }
+
+  blockquote > p::before {
+    content: open-quote;
+  }
+
+  blockquote > p::after {
+    content: close-quote;
+  }
+
+  blockquote > p {
+    --_quote-border-thickness: 0.25rem;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    border-left: var(--_quote-border-thickness) solid var(--text-base);
+    border-radius: var(--_quote-border-thickness) 0 0 var(--_quote-border-thickness);
   }
 
   @media(prefers-color-scheme: dark) {
-
+    /* --clr-primary-100: oklch(94.11% 0.04 66.29);  */
+    /* --clr-primary-300: oklch(88.67% 0.08 66.29);  */
+    /* --clr-primary-500: oklch(83.52% 0.1213 66.29);  */
+    /* --clr-secondary-500: oklch(52.36% 0.089 200.9);  */
+    /* --clr-accent-500: oklch(65.02% 0.211 24.96);  */
+    /* --clr-base-800: oklch(27.49% 0.019 258.37); */
+    /* --clr-base-500: oklch(35.49% 0.019 258.37); */
+    /* --clr-inverted-100: oklch(98% 0 0); */
   }
 }
