@@ -20,6 +20,7 @@
     flex-direction: column;
 
     min-height: 100%;
+    /* TODO Set a default value */
     background-color: var(--bg-base);
 
     line-height: 1.5rem;
