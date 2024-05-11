@@ -1,0 +1,11 @@
+---
+layout: layouts/layout.webc
+---
+<div>
+  <h1 class="sr-only">CV</h1>
+  <article @html="this.content">
+  </article>
+</div>
+
+<style>
+</style>
