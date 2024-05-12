@@ -202,3 +202,39 @@
     /* --clr-inverted-100: oklch(98% 0 0); */
   }
 }
+
+@layer utilities {
+  .shadow {
+    --_thickness: 0.25rem;
+
+    position: relative;
+    outline: var(--_thickness) solid var(--text-base-soft); 
+    outline-offset: calc(var(--_thickness) * -1); 
+    
+    &::before {
+      /* https://css-irl.info/css-halftone-patterns/ */
+      --_clr-dots: var(--bg-base);
+      --_clr-shadow: var(--primary-shadow);
+      --_size-dots: 1px;
+      --_spacing-dots: 5px;
+      --_position-dots: calc(var(--_spacing-dots) / 2);
+      --_position-shadow: 0.4rem;
+
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1; 
+      
+      background-image: radial-gradient(
+        circle at center,
+        var(--_clr-dots) var(--_size-dots),
+        var(--_clr-shadow) 0
+      );
+      
+      background-size: var(--_spacing-dots) var(--_spacing-dots);
+      background-position: 0 0, var(--_position-dots) var(--_position-dots);
+      translate: var(--_position-shadow) var(--_position-shadow);
+      border-radius: inherit;
+    }
+  }
+}

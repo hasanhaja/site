@@ -1,4 +1,4 @@
-<aside class="toc-container">
+<aside class="toc-container shadow">
   <nav>
     <section>
       <h2>Contents</h2>
@@ -18,7 +18,6 @@
     padding-inline: 1rem;
     padding-block: 1.25rem;
     border-radius: var(--radius-lg);
-    box-shadow: 0.4rem 0.4rem var(--primary-shadow);
   }
   
   .toc-container ol {
