@@ -23,5 +23,5 @@ I have quite a few cubes and I really like them all. Learning the 4x4 and 5x5 st
 - WeiLong WR M 2021 MagLev
 - Super RS3 M 2022 Base
 
-I've set these up with a combination of Weight 3, Gravitas, Silk and Mystic. These were the lubes I could get access to and since it was my first time using lubed cubes, I don't have much of a comparison point. I'm trying to get my hands on DNM-37 and setting up one of cubes from scratch to see if that like that additional better.
+I've set these up with a combination of Weight 3, Gravitas, Silk and Mystic. These were the lubes I could get access to and since it was my first time using lubed cubes, I don't have much of a comparison point. I'm trying to get my hands on DNM-37 and setting up one of cubes from scratch to see if that like that addition better.
 

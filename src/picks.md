@@ -8,10 +8,9 @@ displayTitle: My top picks
 
 React will always have a special place in my heart because it was my gateway into the frontend world (and it's still paying the bills, lol). It rightfully brought me out of a world where I was building web applications in Java, and today I happily put up with all the chaos that is the modern frontend. These are my favorite technologies right now:
 
-- Solid
-- React
-- Tailwind
+- Vanilla Web Components & Lit
 - Plain ol' HTML and CSS
+- Solid
 
 ## Fullstack, serverless & more 
 
@@ -20,31 +19,26 @@ I definitely got thrown in the deep end with these ideas and technologies, but i
 - 11ty
 - Astro
 - Deno Deploy
-- SolidStart
-- Vercel
 - AWS CDK
-- Next.js
 
 ## Programming languages 
 
 I'm quite a programming language geek! I may not be great at many of them, but I absolutely adore them. These are my top favorites:
 
-- TypeScript
 - Zig
-- Rust
-- Kotlin
-- Java
-- C++
+- JavaScript with JSDoc
+- Go
+- TypeScript
 
 ## Podcasts & YouTube Channels
 
 I consume this content virtually every single day:
 
+- CoRecursive Podcast
 - JavaScript Jabber
 - JSParty
 - Syntax FM
-- CoRecursive Podcast
 - Changelog
 - Ryan Carniato's streams and VODs
-- Kevin Powells YouTube channel
+- Kevin Powell's YouTube channel
 

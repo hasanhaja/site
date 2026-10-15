@@ -1,0 +1,25 @@
+<footer>
+  <social-links></social-links>
+  <p>
+    <site-copyright></site-copyright>
+  </p>
+</footer>
+
+<style webc:scoped>
+  footer {
+    margin-top: auto;
+    padding-inline: 1rem;
+    padding-block-start: 2rem;
+    padding-block-end: 1rem;
+
+    max-width: var(--breakpoint-xl);
+
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  footer > social-links {
+    margin-left: auto;
+  }
+</style>
